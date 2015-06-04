@@ -3,38 +3,40 @@
 	<head>
 		<meta charset="utf-8" />
 		<!-- Para hacerlo responsive -->
-		<meta name="viewport" content="width:device-width, minimum-scale=1, maximum-scale=1"/>
-		<title>Mi Portafolio</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="../static/css/estilo.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<title>Mi Portafolio</title>				
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
 
 	</head>
 	<body>
+		<nav id="menu" class="MainMenu">
+			<button type="button" id="showMenu" class="MainMenu-button" aria-hidden="true">
+				<i aria-hidden="true" class="MainMenu-icon"> </i> Menu
+			</button>
+			<ul class="MainMenu-list">
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#yo">Sobre Mi</a>
+				</li>
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#perfil">Perfil</a>
+				</li>
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#trabajo">Trabajo</a>
+				</li>
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#contacto">Contacto</a>
+				</li>
+			</ul>	
+		</nav>
+		<div class="MainContainer">
 		<header id="yo" class="Header">
-			<nav class="MainMenu">
-				<ul class="MainMenu-list">
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#yo">Sobre Mi</a>
-					</li>
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#perfil">Perfil</a>
-					</li>
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#trabajo">Trabajo</a>
-					</li>
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#contacto">Contacto</a>
-					</li>
-				</ul>	
-			</nav>
-			<figure class="Header-imageContainer">
-				<img src="../static/images/avatar.jpg" alt="Imagen de Ricardo" class="Header-image"/>
+			<figure class="Header-imageContainer center-text">
+				<img src="img/Ricardo.jpg" alt="Ricardo Landínez" class="Header-image"/>
 				<figcaption class="Header-imageDescription">
 					Ricardo Landínez Ospino
 				</figcaption>				
 			</figure>
-			<p class="Header-name">Desarrollador Web</p>	
+			<p class="Header-name center-text">FrontEnd</p>	
 		</header>		
 		<section id="perfil" class="Profile">
 			<div class="u-containerDefault">
@@ -44,8 +46,7 @@
 				<a class="Profile-link" href="" target="_blank">Enlace hacia Twitter</a>
 				<a class="Profile-link" href="" target="_blank">Enlace hacia Facebook</a>
 				<a class="Profile-link" href="" target="_blank">Enlace hacia Github</a>
-			</div>
-			
+			</div>			
 		</section> 
 		<section id="trabajo" class="Work">
 			<div class="u-containerDefault">
@@ -100,5 +101,9 @@
 				<button class="Footer-button" type="submit">Contactarme</button>
 			</form>
 		</footer>
+		</div>
+		<script type="text/javascript" src="js/libs/hammer.min.js"></script>
+		<script type="text/javascript" src="js/mainmenu.js"></script>
+		<script type="text/javascript" src="js/show_sections.js"></script>
 	</body>
 </html>

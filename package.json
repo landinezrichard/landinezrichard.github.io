@@ -1,0 +1,23 @@
+{
+  "name": "landinezrichard.github.io",
+  "version": "1.0.0",
+  "description": "Portafolio Personal",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "stylus -u nib -c -w -o css/ stylus/estilos.styl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landinezrichard/landinezrichard.github.io.git"
+  },
+  "author": "Ricardo Landínez <landinezrichard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/landinezrichard/landinezrichard.github.io/issues"
+  },
+  "homepage": "https://github.com/landinezrichard/landinezrichard.github.io",
+  "devDependencies": {
+    "nib": "^1.1.0",
+    "stylus": "^0.51.1"
+  }
+}
