@@ -4,7 +4,7 @@
   "description": "Portafolio Personal",
   "main": "index.js",
   "scripts": {
-    "build-css": "stylus -u nib -c -w -o css/ stylus/estilos.styl"
+    "build-css": "stylus -u nib -c -w -o public/css/ dev/stylus/estilos.styl"
   },
   "repository": {
     "type": "git",

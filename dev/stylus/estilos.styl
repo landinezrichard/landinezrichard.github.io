@@ -1,0 +1,183 @@
+@import "nib"
+@import "normalize.styl"
+@import "iconfonts.styl"
+@import "../MainMenu/estilos.styl"
+
+/*FUENTE*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700') 
+
+/*Estilos Generales*/
+
+a
+	text-decoration none
+	
+img	
+	vertical-align top
+	
+ul
+	margin 0
+	padding 0
+
+
+/*
+	VARIABLES COLORES
+______________________________________________________
+*/
+
+azul_claro = #00CCFF
+azul_oscuro = #00127A
+naranja = #FF8C00
+rosado = #EC3C8C
+purpura_oscuro = #200950
+purpura_claro = #68217A
+verde = #BAD800
+
+/*
+	CLASES OOCSS
+______________________________________________________
+*/
+
+.center-text
+	text-align center
+
+/*COMPONENTE HEADER*/
+
+.Header
+	background azul_oscuro
+	
+	/*
+	&-imageContainer
+		text-align center
+*/
+	&-image
+		width 10.5em		
+		border 5px solid azul_claro
+		border-radius 50%
+	
+	&-imageContainer
+		margin 0 .5em
+		padding .5em .5em 0
+		
+	&-imageDescription
+		font-size 2.2em
+		font-weight bold
+		
+	&-name
+		font-size 1.5em
+		font-weight 400	
+		margin 0
+		padding .5em
+		
+	&-imageDescription
+	&-name
+		color white
+	
+/*RESPONSIVE*/
+
+/*screens smaller than 519px (32.438em)*/
+@media  screen and (max-width: 32.438em)
+
+	html
+		font-size 100%
+			
+	.MainContainer
+		overflow hidden
+		position relative
+		// min-width 320px
+		// height 480px		
+		min-height 100vmax
+		/*height 100vmax*/	
+
+	/*COMPONENTE HEADER*/
+
+	.Header
+		min-width 320px
+		min-height 430px
+		overflow hidden	
+		//min-height 100vh			
+		
+		&-imageContainer
+			/*height 10%*/
+		
+		&-image
+			width 8em
+			
+		&-imageDescription
+			/*height 20%*/
+			font-size 2em
+			padding-top .5em
+			
+		&-name
+			font-size 1.5em
+			/*height 10%*/
+		
+	/*COMPONENTE PERFIL*/
+	
+	.Profile		
+		background naranja
+		position absolute
+		height 100vh		
+		width 100vw
+		right -100vw		
+		top 0
+		transition .3s							
+		// &.is-outLeft
+		// 	left -100vw
+		// &.is-outRight
+		// 	right -100vw					
+		&.is-outLeft
+			left -100vw
+		&.is-outRight
+			right -100vw
+		&.is-inLeft
+			left 0
+		&.is-inRight
+			right 0
+	
+	.u-containerDefault
+		color white
+		text-align justify
+		margin 0 .5em 0 .5em
+		padding .5em							
+
+	/*COMPONENTE TRABAJO*/
+	.Work
+		background purpura_oscuro
+		position absolute
+		// max-width 100vw	
+		// min-height 100vh
+		height 100vh		
+		width 100vw
+		right -100vw
+		top 0
+		transition .3s
+		&.is-outLeft
+			left -100vw
+		&.is-outRight
+			right -100vw
+		&.is-inLeft
+			left 0
+		&.is-inRight
+			right 0			
+		
+	/*COMPONENTE FOOTER*/
+		
+	.Footer
+		background verde
+		position absolute		
+		// max-width 100vw	
+		// min-height 100vh
+		width 100vw
+		height 100vh
+		right -100vw
+		top 0
+		transition .3s
+		&.is-outLeft
+			left -100vw
+		&.is-outRight
+			right -100vw
+		&.is-inLeft
+			left 0
+		&.is-inRight
+			right 0
+	

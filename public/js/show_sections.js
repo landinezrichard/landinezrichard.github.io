@@ -40,7 +40,7 @@ function showNext(){
 function showPrevious(){
 	bodyTouch.off("panright",showPrevious);
 	var sections = selectSectionLeft();
-	console.log(state);
+	//console.log(state);
 	if(state !== "yo"){
 		//debugger
 		sections[1].classList.remove("is-inRight");
