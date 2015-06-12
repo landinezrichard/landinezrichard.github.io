@@ -1,0 +1,9 @@
+section#perfil.Profile
+	div.u-containerDefault
+		h2.Profile-title.u-title
+			|	Perfil
+		p.Profile-description
+			|	Tecnólogo en informática y Desarrollador Web, con conocimiento de programación en lenguajes: PHP, Java Script (Ajax - Jquery), SQL, Java. Lenguajes de presentación: HTML 5, y hojas de estilo CSS 3. Administración de Bases de Datos en: MySQL, PostgreSQL, Oracle. Desarrollo de aplicaciones para móviles en Android. Manejo de terminal y administración avanzada en GNU/Linux. Edición de imágenes en Gimp. Animador de dos dimensiones en Flash. Conocimientos de inglés (SENA).
+		- var social_links = ["Twitter", "Facebook", "Github"]
+			each item in social_links
+				a.Profile-link(href="", target="_blank")= item

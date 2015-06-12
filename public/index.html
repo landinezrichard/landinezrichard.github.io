@@ -1,139 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<!-- Para hacerlo responsive -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-		<title>Mi Portafolio</title>				
-		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
-
-	</head>
-	<body>
-		<nav id="menu" class="MainMenu">
-			<button type="button" id="showMenu" class="MainMenu-button" aria-hidden="true">
-				<i aria-hidden="true" class="icon-menu"> </i> Menu
-			</button>
-			<ul class="MainMenu-list">
-				<li class="MainMenu-item">
-					<a class="MainMenu-link" href="#yo">
-						<span class="MainMenu-icon">
-							<i aria-hidden="true" class="icon-user-tie"></i>
-						</span>
-						<span class="MainMenu-text">
-							Sobre Mi
-						</span>
-					</a>
-				</li>
-				<li class="MainMenu-item">
-					<a class="MainMenu-link" href="#perfil">
-						<span class="MainMenu-icon">
-							<i aria-hidden="true" class="icon-profile"></i>
-						</span>
-						<span class="MainMenu-text">
-							Perfil
-						</span>
-					</a>
-				</li>
-				<li class="MainMenu-item">
-					<a class="MainMenu-link" href="#trabajo">
-						<span class="MainMenu-icon">
-							<i aria-hidden="true" class="icon-briefcase"></i>
-						</span>
-						<span class="MainMenu-text">
-							Trabajo
-						</span>
-					</a>
-				</li>
-				<li class="MainMenu-item">
-					<a class="MainMenu-link" href="#contacto">
-						<span class="MainMenu-icon">
-							<i aria-hidden="true" class="icon-mail"></i>
-						</span>
-						<span class="MainMenu-text">
-							Contacto
-						</span>
-					</a>
-				</li>
-			</ul>	
-		</nav>
-		<div class="MainContainer">
-		<header id="yo" class="Header">
-			<figure class="Header-imageContainer center-text">
-				<img src="img/Ricardo.jpg" alt="Ricardo Landínez" class="Header-image"/>
-				<figcaption class="Header-imageDescription">
-					Ricardo Landínez Ospino
-				</figcaption>				
-			</figure>
-			<p class="Header-name center-text">FrontEnd</p>	
-		</header>		
-		<section id="perfil" class="Profile">
-			<div class="u-containerDefault">
-				<h2 class="Profile-title u-title">Perfil</h2>
-				<p class="Profile-description">Tecnólogo en informática y Desarrollador Web, con conocimiento de programación en lenguajes: PHP, Java Script (Ajax - Jquery), SQL, Java. Lenguajes de presentación: HTML 5, y hojas de estilo CSS 3. Administración de Bases de Datos en: MySQL, PostgreSQL, Oracle. Desarrollo de aplicaciones para móviles en Android. Manejo de terminal y administración avanzada en GNU/Linux. Edición de imágenes en Gimp. Animador de dos dimensiones en Flash. Conocimientos de inglés (SENA).</p>
-
-				<a class="Profile-link" href="" target="_blank">Enlace hacia Twitter</a>
-				<a class="Profile-link" href="" target="_blank">Enlace hacia Facebook</a>
-				<a class="Profile-link" href="" target="_blank">Enlace hacia Github</a>
-			</div>			
-		</section> 
-		<section id="trabajo" class="Work">
-			<div class="u-containerDefault">
-				<h2 class="Work-title u-title">Trabajo</h2>
-				<article class="Work-item">
-					<figure class="Work-imageContainer">
-						<img class="Work-image" src="../static/images/thumb1.jpg" alt="Imagen de una pagina que hice"/>
-						<figcaption class="Work-description">
-							Esta pagina la hice tal
-						</figcaption>	
-					</figure>	
-				</article>
-
-				<article class="Work-item">
-					<figure class="Work-imageContainer">
-						<img class="Work-image" src="../static/images/thumb2.jpg" alt="Imagen de una pagina que hice"/>
-						<figcaption class="Work-description">
-							Esta pagina la hice tal
-						</figcaption>	
-					</figure>	
-				</article>
-
-				<article class="Work-item">
-					<figure class="Work-imageContainer">
-						<img class="Work-image" src="../static/images/thumb3.jpg" alt="Imagen de una pagina que hice"/>
-						<figcaption class="Work-description">
-							Esta pagina la hice tal
-						</figcaption>	
-					</figure>	
-				</article>
-
-				<article class="Work-item">
-					<figure class="Work-imageContainer">
-						<img class="Work-image" src="../static/images/thumb1.jpg" alt="Imagen de una pagina que hice"/>
-						<figcaption class="Work-description">
-							Esta pagina la hice tal
-						</figcaption>	
-					</figure>	
-				</article>
-			</div>
-		</section>
-		<footer id="contacto" class="Footer">
-			<div class="u-containerDefault">
-				<div class="Footer-left">
-					<h3 class="Footer-title">Contacto</h3>
-					<p class="Footer-description">Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
-				</div>
-				
-				<form class="Footer-form">
-					<input class="Footer-formInput" type="text" placeholder="Nombre"/>
-					<input class="Footer-formInput" type="email" placeholder="Email"/>
-					<textarea class="Footer-textarea" placeholder="Mensaje"></textarea>
-					<button class="Footer-button" type="submit">Contactarme</button>
-				</form>
-			</div>
-		</footer>
-		</div>
-		<script type="text/javascript" src="js/libs/hammer.min.js"></script>
-		<script type="text/javascript" src="js/mainmenu.js"></script>
-		<script type="text/javascript" src="js/show_sections.js"></script>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <!-- Para hacerlo responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>	Mi Portafolio</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  </head>
+  <body>
+    <nav id="menu" class="MainMenu">
+      <button id="showMenu" type="button" aria-hidden="true" class="MainMenu-button"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>
+      <ul class="MainMenu-list">
+        <li class="MainMenu-item"><a href="#yo" class="MainMenu-link"><span class="MainMenu-icon"><i aria-hidden="true" class="icon-user-tie"></i></span><span class="MainMenu-text">Sobre Mi</span></a></li>
+        <li class="MainMenu-item"><a href="#perfil" class="MainMenu-link"><span class="MainMenu-icon"><i aria-hidden="true" class="icon-profile"></i></span><span class="MainMenu-text">Perfil</span></a></li>
+        <li class="MainMenu-item"><a href="#trabajo" class="MainMenu-link"><span class="MainMenu-icon"><i aria-hidden="true" class="icon-briefcase"></i></span><span class="MainMenu-text">Trabajo</span></a></li>
+        <li class="MainMenu-item"><a href="#contacto" class="MainMenu-link"><span class="MainMenu-icon"><i aria-hidden="true" class="icon-mail"></i></span><span class="MainMenu-text">Contacto</span></a></li>
+      </ul>
+    </nav>
+    <div class="MainContainer">
+      <header id="yo" class="Header">
+        <figure class="Header-imageContainer center-text"><img src="img/Ricardo.jpg" alt="Ricardo Landínez" class="Header-image">
+          <figcaption class="Header-imageDescription">	Ricardo Landínez Ospino</figcaption>
+        </figure>
+        <p class="Header-name center-text">	FrontEnd	</p>
+      </header>
+      <section id="perfil" class="Profile">
+        <div class="u-containerDefault">
+          <h2 class="Profile-title u-title">	Perfil</h2>
+          <p class="Profile-description">	Tecnólogo en informática y Desarrollador Web, con conocimiento de programación en lenguajes: PHP, Java Script (Ajax - Jquery), SQL, Java. Lenguajes de presentación: HTML 5, y hojas de estilo CSS 3. Administración de Bases de Datos en: MySQL, PostgreSQL, Oracle. Desarrollo de aplicaciones para móviles en Android. Manejo de terminal y administración avanzada en GNU/Linux. Edición de imágenes en Gimp. Animador de dos dimensiones en Flash. Conocimientos de inglés (SENA).</p><a href="" target="_blank" class="Profile-link">Twitter</a><a href="" target="_blank" class="Profile-link">Facebook</a><a href="" target="_blank" class="Profile-link">Github</a>
+        </div>
+      </section>
+      <section id="trabajo" class="Work">
+        <div class="u-containerDefault">
+          <h2 class="Work-title u-title">	Trabajo</h2>
+          <article class="Work-item">
+            <figure class="Work-imageContainer"><img src="../static/images/thumb1.jpg" alt="Imagen de una pagina que hice" class="Work-image">
+              <figcaption class="Work-description">	Página Web</figcaption>
+            </figure>
+          </article>
+          <article class="Work-item">
+            <figure class="Work-imageContainer"><img src="../static/images/thumb1.jpg" alt="Imagen de una pagina que hice" class="Work-image">
+              <figcaption class="Work-description">	Página Web</figcaption>
+            </figure>
+          </article>
+          <article class="Work-item">
+            <figure class="Work-imageContainer"><img src="../static/images/thumb1.jpg" alt="Imagen de una pagina que hice" class="Work-image">
+              <figcaption class="Work-description">	Página Web</figcaption>
+            </figure>
+          </article>
+          <article class="Work-item">
+            <figure class="Work-imageContainer"><img src="../static/images/thumb1.jpg" alt="Imagen de una pagina que hice" class="Work-image">
+              <figcaption class="Work-description">	Página Web</figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <footer id="contacto" class="Footer">
+        <div class="u-containerDefault">
+          <div class="Footer-left">
+            <h3 class="Footer-title">	Contacto</h3>
+            <p class="Footer-description">	Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
+          </div>
+          <form class="Footer-form">
+            <input type="text" placeholder="Nombre" class="Footer-formInput">
+            <input type="email" placeholder="Email" class="Footer-formInput">
+            <textarea placeholder="Mensaje" class="Footer-textarea"></textarea>
+            <button type="submit" class="Footer-button">	Contactarme</button>
+          </form>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/libs/hammer.min.js"></script>
+    <script type="text/javascript" src="js/mainmenu.js"></script>
+    <script type="text/javascript" src="js/show_sections.js"></script>
+  </body>
 </html>

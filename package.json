@@ -4,7 +4,8 @@
   "description": "Portafolio Personal",
   "main": "index.js",
   "scripts": {
-    "build-css": "stylus -u nib -c -w -o public/css/ dev/stylus/estilos.styl"
+    "build-css": "stylus -u nib -c -w -o public/css/ dev/stylus/estilos.styl",
+    "build-html": "jade -P -w -o ./public ./dev/index.jade"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/landinezrichard/landinezrichard.github.io",
   "devDependencies": {
+    "jade": "^1.10.0",
     "nib": "^1.1.0",
     "stylus": "^0.51.1"
   }
