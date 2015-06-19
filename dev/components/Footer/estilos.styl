@@ -1,0 +1,27 @@
+verde = #BAD800
+
+/*RESPONSIVE*/
+
+/*screens smaller than 519px (32.438em)*/
+@media  screen and (max-width: 32.438em)
+
+	/*COMPONENTE FOOTER*/
+		
+	.Footer
+		background verde
+		position absolute		
+		// max-width 100vw	
+		// min-height 100vh
+		width 100vw
+		height 100vh
+		right -100vw
+		top 0
+		transition .3s
+		&.is-outLeft
+			left -100vw
+		&.is-outRight
+			right -100vw
+		&.is-inLeft
+			left 0
+		&.is-inRight
+			right 0

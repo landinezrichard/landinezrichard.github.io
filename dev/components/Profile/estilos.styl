@@ -1,0 +1,29 @@
+naranja = #FF8C00
+
+/*RESPONSIVE*/
+
+/*screens smaller than 519px (32.438em)*/
+@media  screen and (max-width: 32.438em)
+
+	/*COMPONENTE PERFIL*/
+	
+	.Profile		
+		background naranja
+		position absolute
+		height 100vh		
+		width 100vw
+		right -100vw		
+		top 0
+		transition .3s							
+		// &.is-outLeft
+		// 	left -100vw
+		// &.is-outRight
+		// 	right -100vw					
+		&.is-outLeft
+			left -100vw
+		&.is-outRight
+			right -100vw
+		&.is-inLeft
+			left 0
+		&.is-inRight
+			right 0

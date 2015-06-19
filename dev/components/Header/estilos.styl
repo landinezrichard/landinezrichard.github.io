@@ -1,0 +1,60 @@
+azul_claro = #00CCFF
+azul_oscuro = #00127A
+
+/*COMPONENTE HEADER*/
+
+.Header
+	background azul_oscuro
+	
+	/*
+	&-imageContainer
+		text-align center
+*/
+	&-image
+		width 10.5em		
+		border 5px solid azul_claro
+		border-radius 50%
+	
+	&-imageContainer
+		margin 0 .5em
+		padding .5em .5em 0
+		
+	&-imageDescription
+		font-size 2.2em
+		font-weight bold
+		
+	&-name
+		font-size 1.5em
+		font-weight 400	
+		margin 0
+		padding .5em
+		
+	&-imageDescription
+	&-name
+		color white
+		
+/*RESPONSIVE*/
+
+/*screens smaller than 519px (32.438em)*/
+@media  screen and (max-width: 32.438em)
+
+	.Header
+		min-width 320px
+		min-height 430px
+		overflow hidden	
+		//min-height 100vh			
+		
+		&-imageContainer
+			/*height 10%*/
+		
+		&-image
+			width 8em
+			
+		&-imageDescription
+			/*height 20%*/
+			font-size 2em
+			padding-top .5em
+			
+		&-name
+			font-size 1.5em
+			/*height 10%*/
