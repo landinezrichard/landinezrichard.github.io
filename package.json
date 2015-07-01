@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build-css": "stylus -u nib -c -w -o public/css/ dev/stylus/estilos.styl",
-    "build-html": "jade -P -w -o ./public ./dev/index.jade"
+    "build-html": "jade -P -w -o ./public ./dev/index.jade",
+    "build-js": "browserify ./dev/app.js -t babelify -o ./public/js/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,13 @@
   },
   "homepage": "https://github.com/landinezrichard/landinezrichard.github.io",
   "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
     "jade": "^1.10.0",
     "nib": "^1.1.0",
     "stylus": "^0.51.1"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.4"
   }
 }
