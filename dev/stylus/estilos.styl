@@ -1,3 +1,16 @@
+/*
+	VARIABLES COLORES
+______________________________________________________
+*/
+
+azul_claro = #00CCFF
+azul_oscuro = #00127A
+naranja = #FF8C00
+rosado = #EC3C8C
+purpura_oscuro = #200950
+purpura_claro = #68217A
+verde = #BAD800
+
 @import "nib"
 @import "normalize.styl"
 @import "iconfonts.styl"
@@ -22,20 +35,6 @@ ul
 	margin 0
 	padding 0
 
-
-/*
-	VARIABLES COLORES
-______________________________________________________
-*/
-
-azul_claro = #00CCFF
-azul_oscuro = #00127A
-naranja = #FF8C00
-rosado = #EC3C8C
-purpura_oscuro = #200950
-purpura_claro = #68217A
-verde = #BAD800
-
 /*
 	CLASES OOCSS
 ______________________________________________________
@@ -53,12 +52,17 @@ ______________________________________________________
 		font-size 100%
 			
 	.MainContainer
-		overflow hidden
-		position relative
+		//*overflow hidden
+		//*position relative
 		// min-width 320px
 		// height 480px		
-		min-height 100vmax
-		/*height 100vmax*/	
+		//*min-height 100vmax
+		/*height 100vmax*/
+		position relative
+		//top 0
+		//left 0
+		width 100%
+		max-height 100vmax
 		
 	.u-containerDefault
 		color white
