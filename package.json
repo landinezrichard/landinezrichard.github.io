@@ -28,6 +28,7 @@
     "stylus": "^0.51.1"
   },
   "dependencies": {
-    "hammerjs": "^2.0.4"
+    "hammerjs": "^2.0.4",
+    "jquery": "^2.1.4"
   }
 }

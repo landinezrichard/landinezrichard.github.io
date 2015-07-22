@@ -875,11 +875,18 @@
 
   }
 
-  if ( typeof define == 'function' && typeof define.amd == 'object' && define.amd ) {
+  if ( typeof define === 'function' && typeof define.amd === 'object' && define.amd ) {
+      // AMD
       define(function() {
         return init( win.jQuery || win.Zepto );
       });
-  } else {
+  } else if (typeof exports === 'object') {
+      // CommonJS
+      module.exports = init( win.jQuery || win.Zepto );      
+  }
+
+  else {
+    // Global Variables
       win.Dragend = init( win.jQuery || win.Zepto );
   }
 

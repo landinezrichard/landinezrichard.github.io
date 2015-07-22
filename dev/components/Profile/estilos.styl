@@ -1,29 +1,32 @@
 //naranja = #FF8C00
+//azul_claro = #00CCFF
+//purpura_oscuro = #200950
+
+.Profile
+	&-social
+		margin-top 1.6em
+		text-align center
+
+	&-link
+		color white
+		text-decoration none
+		padding .4em .4em
+		border-radius 2em
+		margin-right .3em
+	&-link.twitter
+		background azul_claro
+	&-link.github
+		background purpura_oscuro	
+	&-icon
+		padding-right .5em			
 
 /*RESPONSIVE*/
 
 /*screens smaller than 519px (32.438em)*/
-@media  screen and (max-width: 32.438em)
+@media  screen and (max-width 32.438em)
 
 	/*COMPONENTE PERFIL*/
 	
 	.Profile		
-		background naranja
-		//position absolute
-		//*height 100vh		
-		//*width 100vw
-		//right -100vw		
-		//top 0
-		transition .3s							
-		// &.is-outLeft
-		// 	left -100vw
-		// &.is-outRight
-		// 	right -100vw					
-		&.is-outLeft
-			left -100vw
-		&.is-outRight
-			right -100vw
-		&.is-inLeft
-			left 0
-		&.is-inRight
-			right 0
+		background naranja		
+		transition .3s		
