@@ -1,8 +1,8 @@
 'use strict'
 const Hammer = require('hammerjs');
-const mainMenu = require('./components/MainMenu');
-const Tooltips = require('./components/tooltips/tooltip.js');    
 const Dragend = require('./lib/dragend.js');
+require('./components/MainMenu');
+
 
 /*Truco para ocultar la barra de URL en el iPhone, Android y otros dispositivos táctiles que tienen una barra de URL disponible para ocultar. 
 
@@ -46,14 +46,20 @@ bodyTouch.on("pandown",moveUp);
 
 let $menuLinks = document.querySelectorAll(".MainMenu-link");
 
+//obtenemos el contenedor de las paginas para iniciar Dragend
 var $container = document.querySelector(".MainContainer");
-let dragend = new Dragend($container); 
+let dragend = new Dragend($container);
 
-Tooltips.init_tooltip();
-var $Knowledge = document.querySelector('.Knowledge');
-$Knowledge.addEventListener('click', Tooltips.removeSpecial_tooltip);
+//iniciamos los tooltips
+require('./components/Knowledge');
 
 menuNavigate($menuLinks);
+
+let $ = require('jquery');
+
+require('./components/slides/responsiveslides.js');
+
+$(".rslides").responsiveSlides({maxwidth: 460});
 
 //le pasamos el objeto secciones, y por cada id, obtenemos el elemento del DOM, y se guarda en el mismo objeto.
 function getSections(secciones,size){
@@ -104,3 +110,5 @@ function moveDown(){
 		bodyTouch.on("panup",moveDown);    
 	}, 400);
 }
+
+require('./components/Footer');

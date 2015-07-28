@@ -5,9 +5,9 @@ footer#contacto.Footer.dragend-page
 				|	Contacto
 			p.Footer-description
 				|	Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario
-		form.Footer-form
-			input.Footer-formInput(type="text", placeholder="Nombre")
-			input.Footer-formInput(type="email", placeholder="Email")
-			textarea.Footer-textarea(placeholder="Mensaje")
+		form#contact_form.Footer-form
+			input.Footer-formInput(type="text", placeholder="*Nombre", required='', name="nombre")
+			input.Footer-formInput(type="email", placeholder="*Email", required='', name="email")
+			textarea.Footer-textarea(placeholder="*Mensaje", required='', name="mensaje")
 			button.Footer-button(type="submit")
 				|	Contactarme

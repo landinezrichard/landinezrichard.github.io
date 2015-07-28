@@ -9,8 +9,8 @@ let target  = false,
 
 export function init_tooltip(){
     let targets = $( '[rel~=tooltip]' );
-    //antes mouseenter    
-    targets.bind( 'mouseover', function()
+    
+    targets.bind( 'mouseenter', function()
     {        
         target  = $( this );
         tip = target.attr( 'title' );
@@ -31,11 +31,7 @@ export function init_tooltip(){
         } );        
  
         target.bind( 'mouseleave', remove_tooltip );
-        //tooltip.bind( 'click', remove_tooltip );
-
-        //bodyTouch.on( 'tap', remove_tooltip );
-        //bodyTouch.on( 'panleft', remove_tooltip );
-        //bodyTouch.on( 'panright', remove_tooltip )
+        //tooltip.bind( 'click', remove_tooltip );        
     });
 }  
 

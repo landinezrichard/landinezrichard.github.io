@@ -1,27 +1,64 @@
 //verde = #BAD800
+verde_boton = #C2CC85
+rojo_suave = #FFBCBC
+letra =#272822
+
+/*COMPONENTE FOOTER*/
+
+.Footer
+	&-button
+		background naranja
+		color white
+		padding .5em 1em
+		border 1px solid verde_boton
+		border-radius 1em
+		font-size 1.2em
+		box-shadow 0 0 10px rgba(black,.5)
+	&-formInput.valid
+	&-textarea.valid
+		border 1px solid aqua
+	&-formInput.error
+	&-textarea.error
+		border 1px solid red
+		background rojo_suave
+		
+.error
+	display inline-block
+	padding-bottom .5em
 
 /*RESPONSIVE*/
 
 /*screens smaller than 519px (32.438em)*/
 @media  screen and (max-width: 32.438em)
-
-	/*COMPONENTE FOOTER*/
 		
 	.Footer
 		background verde
-		//*position absolute		
-		// max-width 100vw	
-		// min-height 100vh
-		//*width 100vw
-		//*height 100vh
-		//*right -100vw
-		//*top 0
 		transition .3s
-		&.is-outLeft
-			left -100vw
-		&.is-outRight
-			right -100vw
-		&.is-inLeft
-			left 0
-		&.is-inRight
-			right 0
+		padding 2em 0
+		text-align center
+		max-width 30em
+		mar
+		
+		&-left
+			display inline-block			
+		
+		&-title
+			font-size 1.5em
+			font-weight bold
+			
+		&-form
+			text-align center
+			display inline-block
+			color letra
+		
+		&-formInput	
+		&-textarea
+			display block
+			margin 0 0 1em
+			padding .5em
+			border-radius 1em
+			border none
+			min-width 270px
+			
+		&-textarea			
+			min-height 80px
