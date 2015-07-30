@@ -4,6 +4,7 @@ let $ = require('jquery');
 
 require('../../lib/validate/jquery.validate.js');
 require('../../lib/validate/additional-methods.js');
+const Dragdealer = require('dragdealer').Dragdealer;
 
 $('#contact_form').validate({
     rules :{
@@ -47,3 +48,7 @@ Los combos deben tener una opción con el atributo value = “”
 
 
 */
+
+new Dragdealer('iPhone-slider',{
+    steps : 2
+});
