@@ -9,10 +9,11 @@ html(lang="es")
 		link(rel="stylesheet", type="text/css", href="css/estilos.css")
 	body
 		include ./components/MainMenu/template.jade
-		div.MainContainer
+		div.MainContainer.remodal-bg
 			include ./components/Header/template.jade
 			include ./components/Profile/template.jade
 			include ./components/Knowledge/template.jade
 			include ./components/Work/template.jade
 			include ./components/Footer/template.jade
+			//include ./components/modal/template.jade
 		script(type="text/javascript", src="js/app.js")
