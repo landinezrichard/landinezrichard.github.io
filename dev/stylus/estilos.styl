@@ -14,20 +14,9 @@ verde = #BAD800
 @import "nib"
 @import "normalize.styl"
 @import "iconfonts.styl"
-@import "../components/MainMenu/estilos.styl"
-@import "../components/Header/estilos.styl"
-@import "../components/Profile/estilos.styl"
-@import "../components/Knowledge/estilos.styl"
-@import "../components/Work/estilos.styl"
-@import "../components/Footer/estilos.styl"
-@import "../components/tooltips/estilos.styl"
-@import "../components/slides/responsiveslides.styl"
-
-@import "../components/modal/remodal.styl"
-@import "../components/modal/remodal-default-theme.styl"
 
 /*FUENTE*/
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700') 
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700') 
 
 /*Estilos Generales*/
 
@@ -40,6 +29,18 @@ img
 ul
 	margin 0
 	padding 0
+	
+@import "../components/MainMenu/estilos.styl"
+@import "../components/Header/estilos.styl"
+@import "../components/Profile/estilos.styl"
+@import "../components/Knowledge/estilos.styl"
+@import "../components/Work/estilos.styl"
+@import "../components/Footer/estilos.styl"
+@import "../components/tooltips/estilos.styl"
+@import "../components/slides/responsiveslides.styl"
+
+@import "../components/modal/remodal.styl"
+@import "../components/modal/remodal-default-theme.styl"
 
 /*
 	CLASES OOCSS
@@ -60,16 +61,8 @@ ______________________________________________________
 	body
 		background azul_claro
 
-	.MainContainer
-		//*overflow hidden
-		//*position relative
-		// min-width 320px
-		// height 480px		
-		//*min-height 100vmax
-		/*height 100vmax*/
-		position relative
-		//top 0
-		//left 0
+	.MainContainer		
+		position relative		
 		width 100%
 		max-height 100vmax
 		

@@ -1,26 +1,30 @@
 //rosado = #EC3C8C
 
 .Knowledge
-	position relative
+	
 	&-list
 		// display flex
 		// justify-content space-around
 		// flex-flow row wrap
 		text-align center
 	&-item		
-		display inline-block
-		font-size 3.2em
-		margin 0 1rem 1rem 1rem
-		//text-align left
-		vertical-align top
-		&:nth-child(2n+0)
-			margin-right 0
-			margin-left 0
-		& > .icon-JS,
+		display flex
+		flex-flow column nowrap
+		justify-content space-between		
+		color #fff
+		background #111		
+		padding .5em
+		margin-bottom .5em
+		border-radius .5em
+		span:first-of-type
+			font-size 3em
+		& > .icon-JS,//no estan sirviendo estos
 		& > .icon-jQuery,
 		& > .icon-php,
-		& > .icon-data	
-			font-size 3rem		
+		& > .icon-data
+			font-size 2.5rem
+		&Description
+			font-size 1em	
 
 /*RESPONSIVE*/
 
@@ -29,6 +33,7 @@
 
 	/*COMPONENTE WORKFLOW*/
 	
-	.Knowledge		
+	.Knowledge
+		position relative		
 		background rosado
 		transition .3s	

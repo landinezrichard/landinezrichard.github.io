@@ -9,10 +9,11 @@
 		list-style none
 		margin 0
 		padding 0
+		max-width 1240px
 
-	/*Agrega los colores a cada elemento del menu, 
-    con la tecnica de seudo clase, de esta forma si 
-    tenemos mas elementos, se vuelve a repetir el color*/
+/*Agrega los colores a cada elemento del menu, 
+con la tecnica de seudo clase, de esta forma si 
+tenemos mas elementos, se vuelve a repetir el color*/
 
 .MainMenu-item
 	&:nth-child(6n+1) 
@@ -43,17 +44,15 @@
 .MainMenu-text
 	display block
 	
-	/*Opaca los demas botones del menu, cuando estamos sobre un boton*/
-	
-.MainMenu-list:hover .MainMenu-link{
+/*Opaca los demas botones del menu, cuando estamos sobre un boton*/
+
+.MainMenu-list:hover .MainMenu-link
 	color rgba(249, 249, 249, .5)
-}
 
-.MainMenu-list:hover .MainMenu-link:hover {
+.MainMenu-list:hover .MainMenu-link:hover
 	color rgba(249, 249, 249, 0.99)
-}
 
-	/*Estilos para el boton de Menu*/
+/*Estilos para el boton de Menu*/
 
 .MainMenu-button
 	background azul_claro
@@ -83,13 +82,12 @@
 	top 3px
 	
 /*screens smaller than 519px (32.438em)*/
-@media  screen and (max-width: 32.438em)
+@media (max-width: 32.438em)
 
-		/* Mostramos el boton de Menu */
+	/* Mostramos el boton de Menu */
 	.MainMenu-button
-		display block					
-	
-		/*max-height: 0em --> oculta los items del menu; */
+		display block
+	/*max-height: 0em --> oculta los items del menu; */
 	.MainMenu-list
 		// max-height 0em
 		overflow hidden
@@ -98,16 +96,10 @@
 		width 100%
 		transition .4s
 		z-index 100
-
-		/*Muestra el menu cuando se hace clic en el icono del menú*/
-	.is-active + .MainMenu-list {				
-		// max-height 30em
+	/*Muestra el menu cuando se hace clic en el icono del menú*/
+	.is-active + .MainMenu-list						
 		overflow hidden
-		// transition max-height .4s
 		top 1.9em
-		
-		// transition top .4s	
-	}	
 
 	.MainMenu-link
 		padding 0.5em
@@ -146,3 +138,207 @@
 		
 		&:nth-child(6n+6)
 			border-left 8px solid rgb(9, 18, 25)
+
+
+/*Para la versión Tablet
+32.5em --> 520px
+49.938em --> 799px
+*/			
+@media (min-width: 32.5em) and (max-width: 49.938em)
+	.MainMenu i
+		background rgba(255,255,255,0.1)
+		border-radius 50%
+		border 4px solid transparent
+		display inline-block
+		font-size 1.5em
+		padding 8% 9%
+		transition border .5s
+
+	.MainMenu-list		
+		position relative
+		top 0
+		width 100%		
+		z-index 100
+		margin 0 auto
+		font-size 1em
+		
+	.MainMenu-item
+		float left
+		text-align center
+		width 20%
+
+		&:hover i
+		&:active i
+		&:focus i
+			border 4px solid rgba(255,255,255,0.1)
+		&:nth-child(6n+1) a:hover
+		&:nth-child(6n+1) a:active
+		&:nth-child(6n+1) a:focus
+			background	rgb(227, 119, 20)
+			
+		&:nth-child(6n+2) a:hover
+		&:nth-child(6n+2) a:active
+		&:nth-child(6n+2) a:focus
+			background rgb(245, 160, 41)
+			
+		&:nth-child(6n+3) a:hover
+		&:nth-child(6n+3) a:active
+		&:nth-child(6n+3) a:focus
+			background rgb(44, 168, 219)
+			
+		&:nth-child(6n+4) a:hover
+		&:nth-child(6n+4) a:active
+		&:nth-child(6n+4) a:focus
+			background rgb(31, 120, 176)
+			
+		&:nth-child(6n+5) a:hover
+		&:nth-child(6n+5) a:active
+		&:nth-child(6n+5) a:focus
+			background rgb(39, 70, 90)
+			
+		&:nth-child(6n+6) a:hover
+		&:nth-child(6n+6) a:active
+		&:nth-child(6n+6) a:focus
+			background rgb(32, 54, 68)
+			
+	.MainMenu-link
+		height 6em		
+		width auto
+			
+		&:hover .MainMenu-text
+			margin-top .5em
+			transition margin .5s
+			
+	.MainMenu-icon
+		padding-top .5em
+
+/*Desktop
+50em --> 800px
+*/			
+@media (min-width: 50em)	
+		
+	.MainMenu-list		
+		overflow hidden
+		position relative
+		top 0em
+		width 100%
+		transition .4s
+		z-index 100
+
+	.MainMenu-item
+		float left
+		text-align center
+		transition border .5s		
+		width 20%		
+		/*Para el width, dividimos 100 entre el numero de elementos y nos da el %*/
+		
+	.MainMenu-link
+		height 9em
+		transition color.5s background .5s height .5s
+		width auto
+		
+		&:hover
+		&:active
+		&:focus
+			height 10em
+		
+		&:hover .MainMenu-text
+			margin-top 3.2em
+			transition margin .5s
+		
+	.MainMenu-icon
+		padding-top 1.4em
+	
+	.MainMenu-text
+		transition margin .5s
+		margin-top 2.1em		
+
+	.MainMenu-item
+		&:nth-child(6n+1) a:hover
+		&:nth-child(6n+1) a:active
+		&:nth-child(6n+1) a:focus
+			border-bottom 4px solid rgb(174, 78, 1)
+			
+		&:nth-child(6n+2) a:hover
+		&:nth-child(6n+2) a:active
+		&:nth-child(6n+2) a:focus
+			border-bottom 4px solid rgb(191, 117, 20)
+			
+		&:nth-child(6n+3) a:hover
+		&:nth-child(6n+3) a:active
+		&:nth-child(6n+3) a:focus
+			border-bottom 4px solid rgb(12, 110, 149)
+			
+		&:nth-child(6n+4) a:hover
+		&:nth-child(6n+4) a:active
+		&:nth-child(6n+4) a:focus
+			border-bottom 4px solid rgb(10, 75, 117)
+			
+		&:nth-child(6n+5) a:hover
+		&:nth-child(6n+5) a:active
+		&:nth-child(6n+5) a:focus
+			border-bottom 4px solid rgb(16, 34, 44)
+			
+		&:nth-child(6n+6) a:hover
+		&:nth-child(6n+6) a:active
+		&:nth-child(6n+6) a:focus
+			border-bottom 4px solid rgb(9, 18, 25)
+			
+	.MainMenu i
+		background rgba(255,255,255,0.1)
+		border-radius 50%
+		box-shadow 0 0 0 0.8em transparent
+		display inline-block
+		font-size 1.8em
+		margin 0 auto
+		padding 0.4em
+		position relative
+		transform translate3d(0, 0, 0)
+		transition box-shadow .6s ease-in-out
+		
+	.MainMenu-link:hover i
+	.MainMenu-link:active i
+	.MainMenu-link:focus i
+		box-shadow 0 0 0px 0px rgba(255,255,255,0.2)
+		transition box-shadow .4s ease-in-out
+		
+	.MainMenu-sticky
+		position fixed
+		width 100%
+		top 0
+		z-index 101
+		
+	.offcanvas
+		position absolute
+		width 50em
+		left -50em
+		top 0
+		transition .3s
+		
+	.oncanvas
+		left 0
+		position fixed
+		z-index 101
+		width 100%
+		top 0
+		transition .3s
+
+/*Desktop
+50em --> 800px
+61.250em --> 980px
+*/		
+@media (min-width: 50em) and (max-width: 61.250em)
+
+	.MainMenu-list
+		font-size 1.2em
+		
+
+// MainMenu text - hoverlink margin top 1em hacer el texto visible
+
+// main menu icon  padding top 1em
+
+// main menu link height 6em
+
+// main menu link hover - height 7em
+
+// main menu list width 60% margin 0 auto font-size 1em

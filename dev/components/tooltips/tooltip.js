@@ -2,13 +2,13 @@
 
 const $ = require('jQuery');
 
-let target  = false,
+var target  = false,
     tooltip = false,
     title   = false,
     tip     = '';
 
 export function init_tooltip(){
-    let targets = $( '[rel~=tooltip]' );
+    var targets = $( '[rel~=tooltip]' );
     
     targets.bind( 'mouseenter', function()
     {        
@@ -70,7 +70,7 @@ function show_tooltip()
     else
         tooltip.removeClass( 'top' );
 
-    let animtop = pos_top+10;
+    var animtop = pos_top+10;
 
     tooltip.css( { left: pos_left, top: pos_top } )
            .animate( { top: animtop, opacity: 1 }, 50 );         
@@ -78,7 +78,7 @@ function show_tooltip()
 
 export function remove_tooltip()
 {
-    let animtop = tooltip.css('top')-10;
+    var animtop = tooltip.css('top')-10;
     tooltip.animate( { top: animtop, opacity: 0 }, 50, function()
     {
         $( this ).remove();
