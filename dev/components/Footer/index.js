@@ -1,4 +1,4 @@
-'use strict'
+
 
 let $ = require('jquery');
 
@@ -93,7 +93,6 @@ $('#contact_form').validate({
 Importante : 
  No olvidar agregar el atributo name a todos campos y combos del formulario.
 Los combos deben tener una opción con el atributo value = “”
-
 
 */
 

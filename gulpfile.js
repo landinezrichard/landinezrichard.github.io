@@ -6,7 +6,7 @@ var gulp    = require('gulp'),
   uglify    = require('gulp-uglify'),
   stylus    = require('gulp-stylus'),
   nib       = require('nib'),
-  minifyCSS = require('gulp-minify-css'),
+  nano      = require('gulp-cssnano'),
   jade      = require('gulp-jade'),
   browserify= require('browserify'),
   jadeify   = require('jadeify'),
@@ -15,7 +15,9 @@ var gulp    = require('gulp'),
   source    = require('vinyl-source-stream'),  
   imageop   = require('gulp-image-optimization'),
   gutil     = require('gulp-util'),
-  groupQuerys= require('gulp-group-css-media-queries');
+  groupQuerys= require('gulp-group-css-media-queries'),
+  smoosher  = require('gulp-smoosher'),
+  rename    = require('gulp-rename');
 
 var os = require('os');  
 
@@ -32,7 +34,8 @@ var paths = {
   html:{
     main  : 'dev/index.jade',
     watch : 'dev/**/*.jade',
-    dest  : 'public'
+    dest  : 'public',
+    inline: 'public/index.html'
   },
   js:{
     main  : 'dev/app.js',
@@ -76,18 +79,7 @@ gulp.task('build-css', function(){
   }))
   .on('error', gutil.log)
   .pipe(groupQuerys())
-  .pipe(minifyCSS({
-    inliner: {
-      request: {
-        hostname: "localhost",
-        port: 8081,
-        path: 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700',
-        headers: {
-          Host: "fonts.googleapis.com"
-        }
-      }
-    }
-  }))
+  .pipe(nano())
   .on('error', gutil.log)
   .pipe(gulp.dest(paths.css.dest))
 });
@@ -143,6 +135,20 @@ gulp.task('image-min', function(){
 gulp.task('copy-fonts', function(){
   return gulp.src(paths.fonts.watch)
     .pipe(gulp.dest(paths.fonts.dest));
+});
+
+/*
+* Tarea incrustar "embebed" el CSS y JS
+*/
+
+gulp.task('inline', function(){
+  gulp.src(paths.html.inline)
+  .pipe(smoosher())
+  .pipe(rename({
+    suffix : '-min',
+    extname: '.html' 
+  }))
+  .pipe(gulp.dest(paths.html.dest));
 });
 
 

@@ -1,22 +1,23 @@
-var $MenuButton = document.querySelector(".MainMenu-button");
-var $MenuButtonText = document.querySelector(".MainMenu-buttonText");
+var showMenu = (function () {
 
-function showMenu(){
-    var listaClases = $MenuButton.classList;
-    var laTiene = 0;
-    
-    for(var i=0; i<listaClases.length; ++i){
-        if(listaClases[i] === "is-active"){            
-            laTiene = 1;      
-            $MenuButton.classList.remove("is-active");
-            $MenuButtonText.innerHTML = "Menu";
-        }
+    const btnMenu = document.querySelector(".MainMenu-button");
+    const menuText = document.querySelector(".MainMenu-buttonText");
+
+    function suscribeEvents () {
+        btnMenu.addEventListener('click',onClickMenu);
     }
 
-    if(laTiene === 0){
-        $MenuButton.classList.add("is-active");   
-        $MenuButtonText.innerHTML = "Close Menu";
+    function onClickMenu () {
+        btnMenu.classList.toggle('is-active');        
     }
-}
 
-$MenuButton.addEventListener("click",showMenu);
+    return {
+        init : function () {
+            suscribeEvents();
+        },
+        close : onClickMenu
+    };
+
+})();
+
+module.exports = showMenu;
