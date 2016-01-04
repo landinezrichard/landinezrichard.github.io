@@ -1,4 +1,7 @@
-//purpura_oscuro = #200950
+/*
+	purpura_oscuro = #200950
+	$gris = #dedede
+*/
 
 /*COMPONENTE TRABAJO*/
 
@@ -24,11 +27,24 @@
 
 /*RESPONSIVE*/
 
-/*screens smaller than 519px (32.438em)*/
-@media  screen and (max-width: 32.438em)
+/*Tablet*/
+@media (min-width: 32.5em) and (max-width: 48em)
+	.Work
+		&-list
+			text-align center
+
+@media  screen and (max-width: 768px)
 	
 	.Work
 		background purpura_oscuro		
 		transition .3s
+		
 		&-item			
 			margin-right 0
+			
+/*Desktop*/
+
+@media (min-width: 768px)
+	.Work
+		border-left 8px solid purpura_oscuro
+		border-bottom 1px solid $gris

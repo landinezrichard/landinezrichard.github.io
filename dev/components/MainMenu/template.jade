@@ -1,9 +1,5 @@
-nav#menu.MainMenu
-	button#showMenu.MainMenu-button(type='button', aria-hidden='true')
-		i.icon-menu(aria-hidden='true')
-		span.MainMenu-buttonText
-		|	Menu
-	ul.MainMenu-list
+nav.MainMenu
+	ul#menu.MainMenu-list
 		- var menuData = [{"id":"yo","description":"Inicio","icon":"icon-user-tie"},{"id":"perfil","description":"Perfil","icon":"icon-profile"},{"id":"conocimientos","description":"Conocimientos","icon":"icon-user-plus"},{"id":"trabajo","description":"Trabajo","icon":"icon-briefcase"},{"id":"contacto","description":"Contacto","icon":"icon-mail"}]
 		each val in menuData
 			include ../MainMenu-item/template.jade

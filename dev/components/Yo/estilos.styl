@@ -1,60 +1,59 @@
-//azul_claro = #00CCFF
-//azul_oscuro = #00127A
-
-/*COMPONENTE HEADER*/
-
-.Header
-	background azul_oscuro
-	
-	/*
-	&-imageContainer
-		text-align center
+/*
+	azul_claro = #00CCFF
+	azul_oscuro = #00127A
+	$gris = #dedede
 */
+
+/*COMPONENTE YO*/
+
+.Yo
+
 	&-image
-		width 10.5em		
+		width 10.5em
 		border 5px solid azul_claro
 		border-radius 50%
-	
+
 	&-imageContainer
 		margin 0 .5em
 		padding .5em .5em 0
-		
+
 	&-imageDescription
 		font-size 2.2em
 		font-weight bold
-		
+
 	&-name
 		font-size 1.5em
-		font-weight 400	
+		font-weight 400
 		margin 0
 		padding .5em
-		
-	&-imageDescription
-	&-name
-		color white
-		
+
 /*RESPONSIVE*/
 
-/*screens smaller than 519px (32.438em)*/
-@media  screen and (max-width: 32.438em)
+/*Tablet*/
+@media  screen and (max-width: 768px)
 
-	.Header
-		//*min-width 320px
-		//*min-height 430px
-		//*overflow hidden	
-		//min-height 100vh			
-		
-		&-imageContainer
-			/*height 10%*/
-		
+	.Yo
+		background azul_oscuro
+
 		&-image
 			width 8em
-			
+
 		&-imageDescription
-			/*height 20%*/
 			font-size 2em
 			padding-top .5em
-			
+
 		&-name
 			font-size 1.5em
-			/*height 10%*/
+
+		&-imageDescription
+		&-name
+			color white
+
+/*Desktop*/
+
+@media (min-width: 768px)
+	.Yo
+		border-left 8px solid azul_oscuro
+		border-bottom 1px solid $gris
+		display inline-block
+		width 45%

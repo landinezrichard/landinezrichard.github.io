@@ -1,0 +1,10 @@
+article.Work-item
+	ul.rslides
+		- for (var x = 1; x <= data.quantity; x++)
+			li
+				figure.Work-imageContainer
+					img.Work-image(src="./img/#{data.src}/#{x}.#{data.ext}", alt="#{data.alt}")
+	span.Work-itemTitle
+		|	#{data.title}
+	p.Work-description
+		|	#{data.description}

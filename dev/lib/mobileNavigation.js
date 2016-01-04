@@ -37,7 +37,8 @@ var mobileNavigation = (function () {
 		}	
 	} 
 
-	function menuNavigate(elements,fn){
+	//function menuNavigate(elements,fn){
+	function menuNavigate(elements){
 	  for(let i = 0; i < elements.length; i++){
 	    //asignamos el evento click a cada enlace del menu
 	    $(elements[i]).bind("click",function (event) {
@@ -49,7 +50,7 @@ var mobileNavigation = (function () {
 	        pos = pos.split("#").pop();
 	        //obtenemos la posición de la seccion, buscando en el objeto secciones, luego dragend como las enumera desde la 1, le sumamos la unidad
 	        let index = getIndex(pos)+1;
-	        fn();
+	        // fn();
 	        //hacemos scroll hasta la seccion correspondiente 
 	        dragend.scrollToPage(index);                 
 	    });
@@ -63,14 +64,15 @@ var mobileNavigation = (function () {
 	  }
 	}
 
-	function initialize (fn) {
+	// function initialize (fn) {
+	function initialize () {
 		//le pasamos el objeto secciones, y por cada id, obtenemos el elemento del DOM, y se guarda en el mismo objeto.
 		getSections(secciones, sectionsSize);
 		
 		dragend = new Dragend($container);
 		//Nos encargamos de la navegacion "dragend" en el menu
-		menuNavigate(menuLinks,fn);
-		
+		// menuNavigate(menuLinks,fn);
+		menuNavigate(menuLinks);
 	}
 
 	function getDrag () {
@@ -82,8 +84,10 @@ var mobileNavigation = (function () {
 	}
 
 	return {
-		init : function (fn) {
-			initialize(fn);
+		init : function () {
+			// function (fn) {
+			// initialize(fn);
+			initialize();
 		},
 		remove : removeDrag,
 		getInstance : getDrag

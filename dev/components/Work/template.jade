@@ -2,32 +2,8 @@ section#trabajo.Work.dragend-page
 	div.u-containerDefault
 		h2.Work-title.u-title
 			|	Trabajo
-		article.Work-item
-			ul.rslides
-				- for (var x = 1; x < 6; x++)
-					li
-						figure.Work-imageContainer
-							img.Work-image(src="./img/lider_express/#{x}.png", alt="Express de Lider")
-			span.Work-itemTitle
-				| Express de Lider
-			p.Work-description
-				| Sitio web corporativo en el cual los usuarios pueden conocer los servicios del supermercado, sus sucursales y el Recetario Express de Líder.
-		article.Work-item
-			ul.rslides
-				- for (var x = 1; x < 3; x++)
-					li
-						figure.Work-imageContainer
-							img.Work-image(src="./img/legendario/#{x}.png", alt="Viajero Legendario Heineken")
-			span.Work-itemTitle
-				| Viajero Legendario Heineken
-			p.Work-description
-				| Mailing para la campaña "Viajero Legendario Heineken" (Chile).
-		article.Work-item
-			ul.rslides
-				li
-					figure.Work-imageContainer
-						img.Work-image(src="./img/carrera/carrera.png", alt="Carrera de Fans Falabella")
-			span.Work-itemTitle
-				| Carrera de Fans Falabella
-			p.Work-description
-				| Campaña "Carrera de Fans" para Falabella.
+		div.Work-list
+			- var info = [{"quantity":"5","src":"lider_express","ext":"png","alt":"Express de Lider","title":"Express de Lider","description":"Sitio web corporativo en el cual los usuarios pueden conocer los servicios del supermercado, sus sucursales y el Recetario Express de Líder."},{"quantity":"2","src":"legendario","ext":"png","alt":"Viajero Legendario Heineken","title":"Viajero Legendario Heineken","description":"Mailing para la campaña 'Viajero Legendario Heineken' (Chile)."},{"quantity":"1","src":"carrera","ext":"png","alt":"Carrera de Fans Falabella","title":"Carrera de Fans Falabella","description":"Campaña 'Carrera de Fans' para Falabella."}]
+			each val in info
+				- data = val
+				include ../Work-item/template.jade

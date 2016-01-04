@@ -1,0 +1,39 @@
+/*
+*	$black = #212121
+*	$white = #FAFAFA
+	azul_claro = #00CCFF
+*/
+
+.Header
+	background-color azul_claro
+	color white
+	height 4.4em
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 1000
+	line-height 4em
+	transition all .3s ease		
+	box-sizing border-box
+		
+	&-mobile
+		display flex
+		justify-content space-between
+	
+	&-logo
+		font-size 1.5em
+		margin 0 0 0 1rem
+		order 1
+
+/*Tablet*/
+		
+@media (min-width: 768px)
+	.Header
+		display flex
+		flex-flow row nowrap
+		justify-content space-around
+		height 5em
+		transition all .3s ease
+		align-items center
+		background-color $black	

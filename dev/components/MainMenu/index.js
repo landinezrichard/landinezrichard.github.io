@@ -1,14 +1,15 @@
 var showMenu = (function () {
 
-    const btnMenu = document.querySelector(".MainMenu-button");
-    const menuText = document.querySelector(".MainMenu-buttonText");
+    const btnMenu = document.getElementById('showMenu');
+    const menu = document.getElementById('menu');
+    const clase = 'MainMenu-list--show';
 
     function suscribeEvents () {
         btnMenu.addEventListener('click',onClickMenu);
     }
 
     function onClickMenu () {
-        btnMenu.classList.toggle('is-active');        
+        menu.classList.toggle(clase);        
     }
 
     return {

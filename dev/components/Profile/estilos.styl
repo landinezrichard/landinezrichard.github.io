@@ -1,6 +1,11 @@
-//naranja = #FF8C00
-//azul_claro = #00CCFF
-//purpura_oscuro = #200950
+/*
+	naranja = #FF8C00
+	azul_claro = #00CCFF
+	purpura_oscuro = #200950
+	$gris = #dedede
+*/
+
+/*COMPONENTE PROFILE*/
 
 .Profile
 	&-social
@@ -16,17 +21,27 @@
 	&-link.twitter
 		background azul_claro
 	&-link.github
-		background purpura_oscuro	
+		background purpura_oscuro
 	&-icon
-		padding-right .5em			
+		padding-right .5em
 
 /*RESPONSIVE*/
 
-/*screens smaller than 519px (32.438em)*/
-@media  screen and (max-width 32.438em)
+/*Tablet*/
+@media  screen and (max-width 768px)
 
-	/*COMPONENTE PERFIL*/
-	
-	.Profile		
-		background naranja		
-		transition .3s		
+	.Profile
+		background naranja
+		transition .3s
+
+/*Desktop*/
+
+@media (min-width: 768px)
+	.Profile
+		border-left 8px solid naranja
+		border-bottom 1px solid $gris
+		display inline-block
+		width 45%
+		padding 1em
+		vertical-align bottom
+		text-align justify

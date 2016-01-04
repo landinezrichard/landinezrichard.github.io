@@ -8,6 +8,34 @@ letra =#272822
 /*COMPONENTE FOOTER*/
 
 .Footer
+	padding 2em 0
+	
+	&-left
+		display inline-block
+		
+	&-title
+		font-size 1.5em
+		font-weight bold
+		
+	&-form
+		text-align center
+		display flex
+		align-items center
+		flex-flow column nowrap
+		color letra
+	
+	&-formInput	
+	&-textarea
+		display block
+		margin 0 auto 1em
+		padding .5em
+		border-radius 1em
+		border none
+		min-width 270px		
+		
+	&-textarea			
+		min-height 80px
+
 	&-button
 		background naranja
 		color white
@@ -80,7 +108,7 @@ letra =#272822
 	//top 0
 	//left 0
 	cursor pointer	
-	z-index 100
+	z-index 999
 	top initial
 	left initial	
 
@@ -102,37 +130,40 @@ letra =#272822
 
 /*RESPONSIVE*/
 
-/*screens smaller than 519px (32.438em)*/
-@media  screen and (max-width: 32.438em)
+/*Tablet*/
+
+@media (max-width: 768px)
 		
 	.Footer
 		background verde
 		transition .3s
-		padding 2em 0
 		text-align center
-		max-width 30em
-		mar
 		
+/*Desktop*/
+
+@media (min-width: 768px)
+	.Footer
+		width 100%
+		border-left 8px solid verde
+		border-bottom 1px solid $gris
+		&-container
+			display flex
+			flex-flow row nowrap
+
 		&-left
-			display inline-block			
-		
-		&-title
-			font-size 1.5em
-			font-weight bold
-			
-		&-form
-			text-align center
 			display inline-block
-			color letra
-		
-		&-formInput	
+			width 35%
+			padding-left 1.5em
+			text-align justify
+		&-form
+			display inline-block
+			width 65%
+		&-formInput
 		&-textarea
-			display block
-			margin 0 0 1em
-			padding .5em
-			border-radius 1em
-			border none
-			min-width 270px
+			background-color #DFF0D8
 			
-		&-textarea			
-			min-height 80px
+	.error
+		display block		
+			
+	.iphone-slider
+		margin 0 auto		

@@ -8,23 +8,28 @@
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
   </head>
   <body>
-    <nav id="menu" class="MainMenu">
-      <button id="showMenu" type="button" aria-hidden="true" class="MainMenu-button"><i aria-hidden="true" class="icon-menu"></i><span class="MainMenu-buttonText"></span>	Menu</button>
-      <ul class="MainMenu-list">
-        <li class="MainMenu-item"><a href="#yo" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-user-tie"></i></span><span class="MainMenu-text"></span>	Inicio</a></li>
-        <li class="MainMenu-item"><a href="#perfil" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-profile"></i></span><span class="MainMenu-text"></span>	Perfil</a></li>
-        <li class="MainMenu-item"><a href="#conocimientos" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-user-plus"></i></span><span class="MainMenu-text"></span>	Conocimientos</a></li>
-        <li class="MainMenu-item"><a href="#trabajo" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-briefcase"></i></span><span class="MainMenu-text"></span>	Trabajo</a></li>
-        <li class="MainMenu-item"><a href="#contacto" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-mail"></i></span><span class="MainMenu-text"></span>	Contacto</a></li>
-      </ul>
-    </nav>
+    <header id="showMenu" class="Header">
+      <div class="Header-mobile">
+        <h1 class="Header-logo">	Ricardo Landínez</h1>
+        <button type="button" class="MainMenu-button"><i class="icon-menu"></i></button>
+      </div>
+      <nav class="MainMenu">
+        <ul id="menu" class="MainMenu-list">
+          <li class="MainMenu-item"><a href="#yo" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-user-tie"></i></span><span class="MainMenu-text"></span>	Inicio</a></li>
+          <li class="MainMenu-item"><a href="#perfil" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-profile"></i></span><span class="MainMenu-text"></span>	Perfil</a></li>
+          <li class="MainMenu-item"><a href="#conocimientos" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-user-plus"></i></span><span class="MainMenu-text"></span>	Conocimientos</a></li>
+          <li class="MainMenu-item"><a href="#trabajo" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-briefcase"></i></span><span class="MainMenu-text"></span>	Trabajo</a></li>
+          <li class="MainMenu-item"><a href="#contacto" class="MainMenu-link"><span class="MainMenu-icon"><i class="icon-mail"></i></span><span class="MainMenu-text"></span>	Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="MainContainer remodal-bg">
-      <header id="yo" class="Header dragend-page">
-        <figure class="Header-imageContainer center-text"><img src="img/Ricardo.jpeg" alt="Ricardo Landínez" class="Header-image">
-          <figcaption class="Header-imageDescription">	Ricardo Landínez Ospino</figcaption>
+      <section id="yo" class="Yo dragend-page">
+        <figure class="Yo-imageContainer center-text"><img src="img/Ricardo.jpeg" alt="Ricardo Landínez" class="Yo-image">
+          <figcaption class="Yo-imageDescription">	Ricardo Landínez Ospino</figcaption>
         </figure>
-        <p class="Header-name center-text">	FrontEnd Developer	</p>
-      </header>
+        <p class="Yo-name center-text">	FrontEnd Developer</p>
+      </section>
       <section id="perfil" class="Profile dragend-page">
         <div class="u-containerDefault">
           <h2 class="Profile-title u-title">	Perfil</h2>
@@ -46,63 +51,67 @@
       <section id="trabajo" class="Work dragend-page">
         <div class="u-containerDefault">
           <h2 class="Work-title u-title">	Trabajo</h2>
-          <article class="Work-item">
-            <ul class="rslides">
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/lider_express/1.png" alt="Express de Lider" class="Work-image"></figure>
-              </li>
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/lider_express/2.png" alt="Express de Lider" class="Work-image"></figure>
-              </li>
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/lider_express/3.png" alt="Express de Lider" class="Work-image"></figure>
-              </li>
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/lider_express/4.png" alt="Express de Lider" class="Work-image"></figure>
-              </li>
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/lider_express/5.png" alt="Express de Lider" class="Work-image"></figure>
-              </li>
-            </ul><span class="Work-itemTitle">Express de Lider</span>
-            <p class="Work-description">Sitio web corporativo en el cual los usuarios pueden conocer los servicios del supermercado, sus sucursales y el Recetario Express de Líder.</p>
-          </article>
-          <article class="Work-item">
-            <ul class="rslides">
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/legendario/1.png" alt="Viajero Legendario Heineken" class="Work-image"></figure>
-              </li>
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/legendario/2.png" alt="Viajero Legendario Heineken" class="Work-image"></figure>
-              </li>
-            </ul><span class="Work-itemTitle">Viajero Legendario Heineken</span>
-            <p class="Work-description">Mailing para la campaña "Viajero Legendario Heineken" (Chile).</p>
-          </article>
-          <article class="Work-item">
-            <ul class="rslides">
-              <li>
-                <figure class="Work-imageContainer"><img src="./img/carrera/carrera.png" alt="Carrera de Fans Falabella" class="Work-image"></figure>
-              </li>
-            </ul><span class="Work-itemTitle">Carrera de Fans Falabella</span>
-            <p class="Work-description">Campaña "Carrera de Fans" para Falabella.</p>
-          </article>
+          <div class="Work-list">
+            <article class="Work-item">
+              <ul class="rslides">
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/lider_express/1.png" alt="Express de Lider" class="Work-image"></figure>
+                </li>
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/lider_express/2.png" alt="Express de Lider" class="Work-image"></figure>
+                </li>
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/lider_express/3.png" alt="Express de Lider" class="Work-image"></figure>
+                </li>
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/lider_express/4.png" alt="Express de Lider" class="Work-image"></figure>
+                </li>
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/lider_express/5.png" alt="Express de Lider" class="Work-image"></figure>
+                </li>
+              </ul><span class="Work-itemTitle">	Express de Lider</span>
+              <p class="Work-description">	Sitio web corporativo en el cual los usuarios pueden conocer los servicios del supermercado, sus sucursales y el Recetario Express de Líder.</p>
+            </article>
+            <article class="Work-item">
+              <ul class="rslides">
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/legendario/1.png" alt="Viajero Legendario Heineken" class="Work-image"></figure>
+                </li>
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/legendario/2.png" alt="Viajero Legendario Heineken" class="Work-image"></figure>
+                </li>
+              </ul><span class="Work-itemTitle">	Viajero Legendario Heineken</span>
+              <p class="Work-description">	Mailing para la campaña 'Viajero Legendario Heineken' (Chile).</p>
+            </article>
+            <article class="Work-item">
+              <ul class="rslides">
+                <li>
+                  <figure class="Work-imageContainer"><img src="./img/carrera/1.png" alt="Carrera de Fans Falabella" class="Work-image"></figure>
+                </li>
+              </ul><span class="Work-itemTitle">	Carrera de Fans Falabella</span>
+              <p class="Work-description">	Campaña 'Carrera de Fans' para Falabella.</p>
+            </article>
+          </div>
         </div>
       </section>
       <footer id="contacto" method="post" action="http://landinezrichard.tk/enviarCorreo.php" class="Footer dragend-page">
         <div class="u-containerDefault">
-          <div class="Footer-left">
-            <h3 class="Footer-title">	Contacto</h3>
-            <p class="Footer-description">	Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
-          </div>
-          <form id="contact_form" class="Footer-form">
-            <input type="text" placeholder="*Nombre" required="" name="nombre" class="Footer-formInput">
-            <input type="email" placeholder="*Email" required="" name="email" class="Footer-formInput">
-            <textarea placeholder="*Mensaje" required="" name="mensaje" class="Footer-textarea"></textarea>
-            <div class="iphone-slider">
-              <div id="iPhone-slider" class="dragdealer">
-                <div class="handle arrow"></div>
-              </div><span class="iphone-sliderText">slide to contact	</span>
+          <h3 class="Footer-title u-title">	Contacto</h3>
+          <div class="Footer-container">
+            <div class="Footer-left">
+              <p class="Footer-description">	Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
             </div>
-          </form>
+            <form id="contact_form" class="Footer-form">
+              <input type="text" placeholder="*Nombre" required="" name="nombre" class="Footer-formInput">
+              <input type="email" placeholder="*Email" required="" name="email" class="Footer-formInput">
+              <textarea placeholder="*Mensaje" required="" name="mensaje" class="Footer-textarea"></textarea>
+              <div class="iphone-slider">
+                <div id="iPhone-slider" class="dragdealer">
+                  <div class="handle arrow"></div>
+                </div><span class="iphone-sliderText">slide to contact</span>
+              </div>
+            </form>
+          </div>
         </div>
       </footer>
     </div>
