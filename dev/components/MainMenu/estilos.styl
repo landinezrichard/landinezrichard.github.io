@@ -11,17 +11,17 @@ repetir(propiedad, dif = false)
 				{propiedad[0]} propiedad[1] propiedad[2] dif[index]
 			else
 				{propiedad[0]} propiedad[1] propiedad[2]
-				
-repe-child(propiedad, dif = false)	
+
+repe-child(propiedad, dif = false)
 	for num, index in (1..6)
 		&:nth-child(6n+{num}) a:hover
 		&:nth-child(6n+{num}) a:active
-		&:nth-child(6n+{num}) a:focus			
+		&:nth-child(6n+{num}) a:focus
 			if dif
 				{propiedad[0]} propiedad[1] propiedad[2] dif[index]
 			else
 				{propiedad[0]} propiedad[1] propiedad[2]
-			
+
 
 .MainMenu
 	line-height 1.2em
@@ -74,10 +74,12 @@ repe-child(propiedad, dif = false)
 		// 	background rgb(21, 40, 54)
 		// 	border-left 8px solid rgb(9, 18, 25)
 		$propiedad = background-color
-		$lista = azul_oscuro naranja rosado $red_pink #a7c200
+		// $lista = azul_oscuro naranja rosado $red_pink #a7c200
+		$lista = $cobalt_1 $cobalt_2 $cobalt_3 $cobalt_4 $cobalt_5
 		repetir($propiedad, $lista)
 		$propiedad = border-left 8px solid
-		$bordercolors = #000c55 #b26200 #a52a62 #cc103f #829700
+		//$bordercolors = #000c55 #b26200 #a52a62 #cc103f #829700
+		$bordercolors = $dark_cb_1 $dark_cb_2 $dark_cb_3 $dark_cb_4 $dark_cb_5
 		repetir($propiedad, $bordercolors)		
 			
 	&-link
@@ -116,7 +118,8 @@ repe-child(propiedad, dif = false)
 			$propiedad = border-bottom 5px solid
 			// $lista = rgb(174, 78, 1) rgb(191, 117, 20) rgb(13, 111, 150) rgb(10, 75, 117) rgb(16, 34, 44) rgb(9, 18, 25)
 			
-			$lista = azul_oscuro naranja rosado $red_pink verde 
+			// $lista = azul_oscuro naranja rosado $red_pink verde
+			$lista = $cobalt_1 $cobalt_2 $cobalt_3 $cobalt_4 $cobalt_5
 			repetir($propiedad, $lista)
 			$propiedad = border-left none
 			repetir($propiedad)
@@ -124,284 +127,9 @@ repe-child(propiedad, dif = false)
 			repetir($propiedad)
 			$propiedad = background-color
 			repe-child($propiedad, $lista)
-			$propiedad = font-size 1.2em
+			// $propiedad = font-size 1.2em
+			$propiedad = font-weight 700
 			repe-child($propiedad)
 			
 		&-link
-			padding 0 .5em			
-
-
-// .MainMenu	
-// 	&-list
-// 		max-width 1240px
-
-// .MainMenu-link
-// 	transition color .5s, background .5s, heigth .5s
-		
-// .MainMenu-icon
-// .MainMenu-text
-// 	display block
-	
-// /*Opaca los demas botones del menu, cuando estamos sobre un boton*/
-
-// .MainMenu-list:hover .MainMenu-link
-// 	color rgba(249, 249, 249, .5)
-
-// .MainMenu-list:hover .MainMenu-link:hover
-// 	color rgba(249, 249, 249, 0.99)
-
-// /*Estilos para el boton de Menu*/
-
-// .MainMenu-button
-// 	background azul_claro
-// 	border-bottom 4px solid rgb(221, 221, 221)
-// 	border none
-// 	color rgb(7, 16, 15)
-// 	cursor pointer
-// 	display none    
-// 	font-size 1.2em
-// 	font-weight normal
-// 	padding 0.5em 0.5em 0.8em
-// 	text-align left
-// 	width 100%	
-// 	position relative
-// 	top 0
-// 	left 0
-// 	rigth 0
-// 	z-index 101
-	
-// 	i
-// 		z-index -1
-
-// .icon-menu
-// 	font-size 1.6em
-// 	line-height 0
-// 	position relative
-// 	top 3px
-	
-// /*screens smaller than 519px (32.438em)*/
-// @media (max-width: 32.438em)
-
-// 	/* Mostramos el boton de Menu */
-// 	.MainMenu-button
-// 		display block
-// 	/*max-height: 0em --> oculta los items del menu; */
-// 	.MainMenu-list
-// 		// max-height 0em
-// 		overflow hidden
-// 		position absolute
-// 		top -30em
-// 		width 100%
-// 		transition .4s
-// 		z-index 100
-// 	/*Muestra el menu cuando se hace clic en el icono del menú*/
-// 	.is-active + .MainMenu-list						
-// 		overflow hidden
-// 		top 1.9em
-
-// 	.MainMenu-link
-// 		padding 0.5em
-	
-// 	.MainMenu-icon
-// 	.MainMenu-text
-// 		display inline-block
-	
-// 	.MainMenu-icon
-// 		height 100%
-	
-// 	.MainMenu-text
-// 		margin-left 1em
-// 		font-size 0.8em	   
-	
-
-// /*Para la versión Tablet
-// 32.5em --> 520px
-// 49.938em --> 799px
-// */			
-// @media (min-width: 32.5em) and (max-width: 49.938em)
-// 	.MainMenu i
-// 		background rgba(255,255,255,0.1)
-// 		border-radius 50%
-// 		border 4px solid transparent
-// 		display inline-block
-// 		font-size 1.5em
-// 		padding 8% 9%
-// 		transition border .5s
-
-// 	.MainMenu-list		
-// 		position relative
-// 		top 0
-// 		width 100%		
-// 		z-index 100
-// 		margin 0 auto
-// 		font-size 1em
-		
-// 	.MainMenu-item
-// 		float left
-// 		text-align center
-// 		width 20%
-
-// 		&:hover i
-// 		&:active i
-// 		&:focus i
-// 			border 4px solid rgba(255,255,255,0.1)
-// 		&:nth-child(6n+1) a:hover
-// 		&:nth-child(6n+1) a:active
-// 		&:nth-child(6n+1) a:focus
-// 			background	rgb(227, 119, 20)
-			
-// 		&:nth-child(6n+2) a:hover
-// 		&:nth-child(6n+2) a:active
-// 		&:nth-child(6n+2) a:focus
-// 			background rgb(245, 160, 41)
-			
-// 		&:nth-child(6n+3) a:hover
-// 		&:nth-child(6n+3) a:active
-// 		&:nth-child(6n+3) a:focus
-// 			background rgb(44, 168, 219)
-			
-// 		&:nth-child(6n+4) a:hover
-// 		&:nth-child(6n+4) a:active
-// 		&:nth-child(6n+4) a:focus
-// 			background rgb(31, 120, 176)
-			
-// 		&:nth-child(6n+5) a:hover
-// 		&:nth-child(6n+5) a:active
-// 		&:nth-child(6n+5) a:focus
-// 			background rgb(39, 70, 90)
-			
-// 		&:nth-child(6n+6) a:hover
-// 		&:nth-child(6n+6) a:active
-// 		&:nth-child(6n+6) a:focus
-// 			background rgb(32, 54, 68)
-			
-// 	.MainMenu-link
-// 		height 6em		
-// 		width auto
-			
-// 		&:hover .MainMenu-text
-// 			margin-top .5em
-// 			transition margin .5s
-			
-// 	.MainMenu-icon
-// 		padding-top .5em
-
-// /*Desktop
-// 50em --> 800px
-// */			
-// @media (min-width: 50em)	
-		
-// 	.MainMenu-list		
-// 		overflow hidden
-// 		position relative
-// 		top 0em
-// 		width 100%
-// 		transition .4s
-// 		z-index 100
-
-// 	.MainMenu-item
-// 		float left
-// 		text-align center
-// 		transition border .5s		
-// 		width 20%		
-// 		/*Para el width, dividimos 100 entre el numero de elementos y nos da el %*/
-		
-// 	.MainMenu-link
-// 		height 9em
-// 		transition color.5s background .5s height .5s
-// 		width auto
-		
-// 		&:hover
-// 		&:active
-// 		&:focus
-// 			height 10em
-		
-// 		&:hover .MainMenu-text
-// 			margin-top 3.2em
-// 			transition margin .5s
-		
-// 	.MainMenu-icon
-// 		padding-top 1.4em
-	
-// 	.MainMenu-text
-// 		transition margin .5s
-// 		margin-top 2.1em		
-
-// 	.MainMenu-item
-// 		&:nth-child(6n+1) a:hover
-// 		&:nth-child(6n+1) a:active
-// 		&:nth-child(6n+1) a:focus
-// 			border-bottom 4px solid rgb(174, 78, 1)
-			
-// 		&:nth-child(6n+2) a:hover
-// 		&:nth-child(6n+2) a:active
-// 		&:nth-child(6n+2) a:focus
-// 			border-bottom 4px solid rgb(191, 117, 20)
-			
-// 		&:nth-child(6n+3) a:hover
-// 		&:nth-child(6n+3) a:active
-// 		&:nth-child(6n+3) a:focus
-// 			border-bottom 4px solid rgb(12, 110, 149)
-			
-// 		&:nth-child(6n+4) a:hover
-// 		&:nth-child(6n+4) a:active
-// 		&:nth-child(6n+4) a:focus
-// 			border-bottom 4px solid rgb(10, 75, 117)
-			
-// 		&:nth-child(6n+5) a:hover
-// 		&:nth-child(6n+5) a:active
-// 		&:nth-child(6n+5) a:focus
-// 			border-bottom 4px solid rgb(16, 34, 44)
-			
-// 		&:nth-child(6n+6) a:hover
-// 		&:nth-child(6n+6) a:active
-// 		&:nth-child(6n+6) a:focus
-// 			border-bottom 4px solid rgb(9, 18, 25)
-			
-// 	.MainMenu i
-// 		background rgba(255,255,255,0.1)
-// 		border-radius 50%
-// 		box-shadow 0 0 0 0.8em transparent
-// 		display inline-block
-// 		font-size 1.8em
-// 		margin 0 auto
-// 		padding 0.4em
-// 		position relative
-// 		transform translate3d(0, 0, 0)
-// 		transition box-shadow .6s ease-in-out
-		
-// 	.MainMenu-link:hover i
-// 	.MainMenu-link:active i
-// 	.MainMenu-link:focus i
-// 		box-shadow 0 0 0px 0px rgba(255,255,255,0.2)
-// 		transition box-shadow .4s ease-in-out
-		
-// 	.MainMenu-sticky
-// 		position fixed
-// 		width 100%
-// 		top 0
-// 		z-index 101
-		
-// 	.offcanvas
-// 		position absolute
-// 		width 50em
-// 		left -50em
-// 		top 0
-// 		transition .3s
-		
-// 	.oncanvas
-// 		left 0
-// 		position fixed
-// 		z-index 101
-// 		width 100%
-// 		top 0
-// 		transition .3s
-
-// /*Desktop
-// 50em --> 800px
-// 61.250em --> 980px
-// */		
-// @media (min-width: 50em) and (max-width: 61.250em)
-
-// 	.MainMenu-list
-// 		font-size 1.2em
+			padding 0 .5em

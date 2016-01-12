@@ -32,19 +32,24 @@
 @media  screen and (max-width 768px)
 
 	.Profile
-		background naranja
+		// background naranja
+		background $light_cobalt_1
 		transition .3s
+		&-title
+		&-description
+			color #111
 
 /*Desktop*/
 
 @media (min-width: 768px)
 	.Profile
-		border-left 8px solid naranja
+		// border-left 8px solid naranja
 		border-bottom 1px solid $gris
 		display inline-block
 		width 50%
 		padding 1em
 		vertical-align bottom
 		text-align justify
-		background-color $light_orange
+		// background-color $light_orange
+		// background-color $light_cobalt_1
 		margin 0 auto

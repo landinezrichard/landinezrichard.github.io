@@ -41,8 +41,13 @@
 @media  screen and (max-width: 768px)
 	
 	.Work
-		background $indigo		
+		// background $indigo		
+		background $light_cobalt_1
 		transition .3s
+		
+		&-title
+		&-item
+			color #111
 		
 		&-item			
 			margin-right 0
@@ -51,10 +56,12 @@
 
 @media (min-width: 768px)
 	.Work
-		border-left 8px solid $indigo
+		// border-left 8px solid $indigo
 		border-bottom 1px solid $gris
 		padding 1em
-		background-color $light_indigo
+		// background-color $light_indigo
+		background-color $cobalt_3
+		color #fff
 		&-item
 			position relative
 			z-index 1

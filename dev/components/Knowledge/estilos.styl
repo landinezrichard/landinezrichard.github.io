@@ -38,7 +38,8 @@
 @media  screen and (max-width 768px)	
 	.Knowledge
 		//position relative		
-		background rosado
+		//background rosado
+		background $cobalt_2
 		transition .3s
 		
 @media (min-width: 32.5em) and (max-width: 768px)
@@ -56,10 +57,15 @@
 @media (min-width: 768px)
 	.Knowledge
 		padding 1em
-		border-left 8px solid rosado
+		// border-left 8px solid rosado
 		border-bottom 1px solid $gris
-		background-color $light_pink
+		// background-color $light_pink
+		background-color $cobalt_2
+		color #fff
 		
+		&-description
+			margin-left 3em
+
 		&-list
 			display flex
 			flex-flow row wrap
