@@ -24,7 +24,8 @@ var mobileNavigation = (function () {
 	//guardamos el tamaño del objeto secciones, para no estar calculandolo
 	let sectionsSize = secciones.length;
 
-	let menuLinks = document.querySelectorAll(".MainMenu-link");
+	//let menuLinks = document.querySelectorAll(".MainMenu-link");
+	let menuLinks = document.querySelector(".MainMenu-list");
 
 	//obtenemos el contenedor de las paginas para iniciar Dragend
 	var $container = document.querySelector(".MainContainer");	
@@ -36,15 +37,11 @@ var mobileNavigation = (function () {
 			secciones[i].elemento = document.querySelector(`#${secciones[i].id}`);		
 		}	
 	} 
-
-	//function menuNavigate(elements,fn){
+	
 	function menuNavigate(elements){
-	  for(let i = 0; i < elements.length; i++){
-	    //asignamos el evento click a cada enlace del menu
-	    $(elements[i]).bind("click",function (event) {
-	    //elements[i].addEventListener("click",function (event) {
-	        //evitamos comportamiento por defecto, para que no viaje a los href=#id  	
-	        event.preventDefault();
+		$(elements).on("click","a",function (event) {
+			//evitamos comportamiento por defecto, para que no viaje a los href=#id	    	
+	        event.preventDefault();	        
 	        //obtenemos el href, y eliminamos el "#"
 	        let pos = this.getAttribute("href");
 	        pos = pos.split("#").pop();
@@ -53,8 +50,7 @@ var mobileNavigation = (function () {
 	        // fn();
 	        //hacemos scroll hasta la seccion correspondiente 
 	        dragend.scrollToPage(index);                 
-	    });
-	  }
+		});	  
 	}
 
 	function getIndex(busqueda){

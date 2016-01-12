@@ -1,6 +1,10 @@
 /*
 	purpura_oscuro = #200950
 	$gris = #dedede
+	$red_pink = #ff144f
+	$light_red_pink = #ffa1b8
+	$indigo = #890fff
+	$light_indigo = #dbb7ff
 */
 
 /*COMPONENTE TRABAJO*/
@@ -32,11 +36,12 @@
 	.Work
 		&-list
 			text-align center
+			position relative
 
 @media  screen and (max-width: 768px)
 	
 	.Work
-		background purpura_oscuro		
+		background $indigo		
 		transition .3s
 		
 		&-item			
@@ -46,5 +51,10 @@
 
 @media (min-width: 768px)
 	.Work
-		border-left 8px solid purpura_oscuro
+		border-left 8px solid $indigo
 		border-bottom 1px solid $gris
+		padding 1em
+		background-color $light_indigo
+		&-item
+			position relative
+			z-index 1

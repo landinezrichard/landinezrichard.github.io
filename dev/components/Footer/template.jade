@@ -1,4 +1,4 @@
-footer#contacto.Footer.dragend-page(method="post", action="http://landinezrichard.tk/enviarCorreo.php")
+footer#contacto.Footer.dragend-page
 	div.u-containerDefault
 		h3.Footer-title.u-title
 			|	Contacto
@@ -6,12 +6,10 @@ footer#contacto.Footer.dragend-page(method="post", action="http://landinezrichar
 			div.Footer-left
 				p.Footer-description
 					|	Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario
-			form#contact_form.Footer-form
+			form#contact_form.Footer-form(method="POST", action="enviarCorreo.php")
 				input.Footer-formInput(type="text", placeholder="*Nombre", required='', name="nombre")
 				input.Footer-formInput(type="email", placeholder="*Email", required='', name="email")
 				textarea.Footer-textarea(placeholder="*Mensaje", required='', name="mensaje")
-				div.iphone-slider
-					div#iPhone-slider.dragdealer
-						div.handle.arrow
-					span.iphone-sliderText
-						| slide to contact
+				div(class="g-recaptcha" data-sitekey="6LeYlxQTAAAAAI36NsCd21wDgMdNbbdSjNPG-G4g")
+				button(type="submit" class="Footer-button")
+					|	Contactarme

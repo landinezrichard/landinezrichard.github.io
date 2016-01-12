@@ -11,8 +11,9 @@ html(lang="es")
 		include ./components/Header/template.jade
 		//- include ./components/MainMenu/template.jade
 		div.MainContainer.remodal-bg
-			include ./components/Yo/template.jade
-			include ./components/Profile/template.jade
+			div.flex
+				include ./components/Yo/template.jade
+				include ./components/Profile/template.jade
 			include ./components/Knowledge/template.jade
 			include ./components/Work/template.jade
 			include ./components/Footer/template.jade

@@ -5,18 +5,9 @@
 	const showMenu         = require('./components/MainMenu');	
 	const slides           = require('./lib/slides.js');
 	const mediaQuery       = require('./lib/mediaQuery.js');
+	const loadScript       = require('./lib/loadScript.js');
 
 	document.addEventListener('DOMContentLoaded', onDOMload);
-
-	/*requerimos las funcionalidades del footer:
-
-	  - Validar Formulario
-	  - Enviar formulario por ajax
-	  - Slider captcha
-	  - Ventana modal
-
-	*/
-	require('./components/Footer');
 
 	function endOfPage(){  
 	
@@ -41,7 +32,11 @@
 		showMenu.init();
 		mediaQuery.init();
 		slides.init();
-		$( window ).resize(recarga);		
+		$( window ).resize(recarga);
+
+		
+		loadScript('https://www.google.com/recaptcha/api.js');
+		require('./components/Footer');		
 	}
 
 }())

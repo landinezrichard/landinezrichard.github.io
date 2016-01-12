@@ -24,21 +24,23 @@
       </nav>
     </header>
     <div class="MainContainer remodal-bg">
-      <section id="yo" class="Yo dragend-page">
-        <figure class="Yo-imageContainer center-text"><img src="img/Ricardo.jpeg" alt="Ricardo Landínez" class="Yo-image">
-          <figcaption class="Yo-imageDescription">	Ricardo Landínez Ospino</figcaption>
-        </figure>
-        <p class="Yo-name center-text">	FrontEnd Developer</p>
-      </section>
-      <section id="perfil" class="Profile dragend-page">
-        <div class="u-containerDefault">
-          <h2 class="Profile-title u-title">	Perfil</h2>
-          <p class="Profile-description">	Hola!!! Me encanta ayudarte a crear aplicaciones web profesionales, usando los últimos estándares y tecnologías para que no te quedes atrás. </p>
-          <p class="Profile-description">	Crear una WebApp para que se vea y se sienta tal y como la imaginaste es mi misión.</p>
-          <p class="Profile-description">	Html5, Css3 y JavaScript son parte de mi equipo de trabajo.</p>
-          <div class="Profile-social"><a href="https://twitter.com/landirichard" target="_blank" class="Profile-link twitter"><span class="Profile-icon icon-twitter"></span><span class="Profile-text">@landirichard</span></a><a href="https://github.com/landinezrichard" target="_blank" class="Profile-link github"><span class="Profile-icon icon-github"></span><span class="Profile-text">landinezrichard</span></a></div>
-        </div>
-      </section>
+      <div class="flex">
+        <section id="yo" class="Yo dragend-page">
+          <figure class="Yo-imageContainer center-text"><img src="img/Ricardo.jpeg" alt="Ricardo Landínez" class="Yo-image">
+            <figcaption class="Yo-imageDescription">	Ricardo Landínez Ospino</figcaption>
+          </figure>
+          <p class="Yo-name center-text">	FrontEnd Developer</p>
+        </section>
+        <section id="perfil" class="Profile dragend-page">
+          <div class="u-containerDefault">
+            <h2 class="Profile-title u-title">	Perfil</h2>
+            <p class="Profile-description">	Hola!!! Me encanta ayudarte a crear aplicaciones web profesionales, usando los últimos estándares y tecnologías para que no te quedes atrás. </p>
+            <p class="Profile-description">	Si te estás preguntando ¿qué es un Frontend?, es el encargado de maquetar la estructura semántica del contenido (HTML), codificar el diseño en hojas de estilo (CSS) y agregar la interacción con el usuario (JavaScript). En pocas palabras, es la persona que hace la parte del software(página web o web App) que interactúa con el o los usuarios.</p>
+            <p class="Profile-description">	Crear una Web App para que se vea y se sienta tal y como la imaginaste es mi misión.</p>
+            <div class="Profile-social"><a href="https://twitter.com/landirichard" target="_blank" class="Profile-link twitter"><span class="Profile-icon icon-twitter"></span><span class="Profile-text">@landirichard</span></a><a href="https://github.com/landinezrichard" target="_blank" class="Profile-link github"><span class="Profile-icon icon-github"></span><span class="Profile-text">landinezrichard</span></a></div>
+          </div>
+        </section>
+      </div>
       <section id="conocimientos" class="Knowledge dragend-page">
         <div class="u-containerDefault">
           <h2 class="Knowledge-title u-title">	Conocimientos	</h2>
@@ -94,22 +96,19 @@
           </div>
         </div>
       </section>
-      <footer id="contacto" method="post" action="http://landinezrichard.tk/enviarCorreo.php" class="Footer dragend-page">
+      <footer id="contacto" class="Footer dragend-page">
         <div class="u-containerDefault">
           <h3 class="Footer-title u-title">	Contacto</h3>
           <div class="Footer-container">
             <div class="Footer-left">
               <p class="Footer-description">	Si tienes una pregunta, sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
             </div>
-            <form id="contact_form" class="Footer-form">
+            <form id="contact_form" method="POST" action="enviarCorreo.php" class="Footer-form">
               <input type="text" placeholder="*Nombre" required="" name="nombre" class="Footer-formInput">
               <input type="email" placeholder="*Email" required="" name="email" class="Footer-formInput">
               <textarea placeholder="*Mensaje" required="" name="mensaje" class="Footer-textarea"></textarea>
-              <div class="iphone-slider">
-                <div id="iPhone-slider" class="dragdealer">
-                  <div class="handle arrow"></div>
-                </div><span class="iphone-sliderText">slide to contact</span>
-              </div>
+              <div data-sitekey="6LeYlxQTAAAAAI36NsCd21wDgMdNbbdSjNPG-G4g" class="g-recaptcha"></div>
+              <button type="submit" class="Footer-button">	Contactarme</button>
             </form>
           </div>
         </div>

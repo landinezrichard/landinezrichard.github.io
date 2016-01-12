@@ -3,6 +3,7 @@ var mediaQuery = (function () {
 	
 	const mobileNavigation = require('./mobileNavigation.js');
 	const touchVertical    = require('./touchVertical.js');
+	const desktopNavigation = require('./desktopNavigation.js');
 	const media = "(max-width: 767px)";
 
 	/*
@@ -26,9 +27,9 @@ var mediaQuery = (function () {
 			touchVertical.init();
 			//window.scrollTo(0, 1);         
 		}
-		// else{
-		
-		// }
+		else{
+			desktopNavigation.init();
+		}
 	}	
 
 	return {

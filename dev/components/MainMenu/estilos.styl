@@ -50,29 +50,35 @@ repe-child(propiedad, dif = false)
 			max-height 30em
 			
 	&-item
-		&:nth-child(6n+1)
-			background rgb(208, 101, 3)
-			border-left 8px solid rgb(174, 78, 1)
+		// &:nth-child(6n+1)
+		// 	background rgb(208, 101, 3)
+		// 	border-left 8px solid rgb(174, 78, 1)
 		
-		&:nth-child(6n+2)
-			background rgb(233, 147, 26)
-			border-left 8px solid rgb(191, 117, 20)
+		// &:nth-child(6n+2)
+		// 	background rgb(233, 147, 26)
+		// 	border-left 8px solid rgb(191, 117, 20)
 
-		&:nth-child(6n+3)
-			background rgb(22, 145, 190)
-			border-left 8px solid rgb(13, 111, 150)
+		// &:nth-child(6n+3)
+		// 	background rgb(22, 145, 190)
+		// 	border-left 8px solid rgb(13, 111, 150)
 
-		&:nth-child(6n+4)
-			background rgb(22, 107, 162)
-			border-left 8px solid rgb(10, 75, 117)
+		// &:nth-child(6n+4)
+		// 	background rgb(22, 107, 162)
+		// 	border-left 8px solid rgb(10, 75, 117)
 
-		&:nth-child(6n+5)
-			background rgb(27, 54, 71)
-			border-left 8px solid rgb(16, 34, 44)
+		// &:nth-child(6n+5)
+		// 	background rgb(27, 54, 71)
+		// 	border-left 8px solid rgb(16, 34, 44)
 
-		&:nth-child(6n+6)
-			background rgb(21, 40, 54)
-			border-left 8px solid rgb(9, 18, 25)
+		// &:nth-child(6n+6)http://localhost:8081/#trabajo
+		// 	background rgb(21, 40, 54)
+		// 	border-left 8px solid rgb(9, 18, 25)
+		$propiedad = background-color
+		$lista = azul_oscuro naranja rosado $red_pink #a7c200
+		repetir($propiedad, $lista)
+		$propiedad = border-left 8px solid
+		$bordercolors = #000c55 #b26200 #a52a62 #cc103f #829700
+		repetir($propiedad, $bordercolors)		
 			
 	&-link
 		text-decoration none
@@ -110,14 +116,14 @@ repe-child(propiedad, dif = false)
 			$propiedad = border-bottom 5px solid
 			// $lista = rgb(174, 78, 1) rgb(191, 117, 20) rgb(13, 111, 150) rgb(10, 75, 117) rgb(16, 34, 44) rgb(9, 18, 25)
 			
-			$lista = azul_oscuro naranja rosado purpura_oscuro verde 
-			repetir($propiedad, $lista)			
+			$lista = azul_oscuro naranja rosado $red_pink verde 
+			repetir($propiedad, $lista)
 			$propiedad = border-left none
 			repetir($propiedad)
 			$propiedad = background-color $black
 			repetir($propiedad)
 			$propiedad = background-color
-			repe-child($propiedad, $lista)			
+			repe-child($propiedad, $lista)
 			$propiedad = font-size 1.2em
 			repe-child($propiedad)
 			

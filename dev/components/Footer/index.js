@@ -1,5 +1,4 @@
 
-
 let $ = require('jquery');
 
 //para enviar el formulario por ajax
@@ -9,45 +8,30 @@ require('../../lib/jquery.form.js');
 require('../../lib/validate/jquery.validate.js');
 require('../../lib/validate/additional-methods.js');
 
-//para el slider captcha
-const Dragdealer = require('dragdealer').Dragdealer;
-
-//para la ventana modal
-require('remodal');
-
-let modal_data = {
-    "modal1": {
-        "id"     : "modal1",
-        "titulo" : "Enviado!!!",
-        "mensaje": "Tu mensaje ha sido enviado, en poco tiempo me pondré en contacto contigo."
-    },
-    "modal2": {
-        "id"     : "modal2",
-        "titulo" : "Ups!!!",
-        "mensaje": "Parece que algo ha salido mal… Intenta enviar tu mensaje nuevamente."
-    }
-};
-
-let modal_template = require('../modal/template.jade');
+const ventanaModal = require('../../lib/ventanaModal.js');
 
 let ajax_options = {     
     url : 'http://landinezrichard.tk/enviarCorreo.php',
     type: 'POST',
     success:    function() {
-        $('.remodal-bg').append( modal_template(modal_data.modal1) );
-        let modal = $('[data-remodal-id=modal1]').remodal();
+        // $('.remodal-bg').append( modal_template(modal_data.modal1) );
+        // let modal = $('[data-remodal-id=modal1]').remodal();
 
-        /**
-         * Opens the modal window
-         */
-        modal.open();
+        // /**
+        //  * Opens the modal window
+        //  */
+        // modal.open();
         //alert('Thanks for your comment!');
+        ventanaModal.modalOk();
+        ventanaModal.openModal();
         $('#contact_form').resetForm();
     },
     error: function(){
-        $('.remodal-bg').append( modal_template(modal_data.modal2) );
-        let modal = $('[data-remodal-id=modal2]').remodal();
-        modal.open();
+        // $('.remodal-bg').append( modal_template(modal_data.modal2) );
+        // let modal = $('[data-remodal-id=modal2]').remodal();
+        // modal.open();
+        ventanaModal.modalErr();
+        ventanaModal.openModal();
     }
 };
 
@@ -83,9 +67,12 @@ $('#contact_form').validate({
             minlength   : "EL mensaje debe tener un minimo de 5 caracteres",
             nowhitespace : "No se permiten espacios en blanco"
         }
-    },
+    },    
     submitHandler: function(form) {
-        $(form).ajaxSubmit(ajax_options);        
+		if(captcha()){
+			$(form).ajaxSubmit(ajax_options); 
+		}
+		// $(form).ajaxSubmit(ajax_options);        
     }
 }); 
 
@@ -96,19 +83,32 @@ Los combos deben tener una opción con el atributo value = “”
 
 */
 
-let sub_button = `<button type="submit" class="Footer-button">
-                    Contactarme
-                </button>`;
+// let sub_button = `<button type="submit" class="Footer-button">
+//                     Contactarme
+//                 </button>`;
 
-new Dragdealer('iPhone-slider',{
-    steps : 2,
-    callback: function(x, y) {
-        // Only 0 and 1 are the possible values because of "steps: 2"
-        //desaparecemos el slider y aparecemos el boton para enviar el formulario
-        if (x) {
-            this.disable();
-            $('.iphone-slider').fadeOut();
-            $('#contact_form').append(sub_button);
-        }
-    }
-});
+// var v = grecaptcha.getResponse();
+// if(v.length != 0)
+// {
+// 	$('#contact_form').append(sub_button);
+// }
+
+function captcha () {	
+    var captcha = $('#g-recaptcha-response').val();
+    var mensaje = `<label id="captcha-error" class="error" for="g-recaptcha">Captcha requerido</label>`;
+
+    if(typeof captcha !== "undefined" && captcha !== null){
+
+		if (captcha.length <= 0) {
+			//error
+			// console.log("Captcha requerido");
+			// $('.g-recaptcha').append(mensaje);
+			return false;
+		}
+		if(captcha.length > 0){
+			// console.log("Captcha OK!!!");
+			// $('#captcha-error').remove();
+			return true;			
+		}
+	}
+}

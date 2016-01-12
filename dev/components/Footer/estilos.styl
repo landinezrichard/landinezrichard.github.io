@@ -1,6 +1,7 @@
 @import 'nib/gradients'
 
 //verde = #BAD800
+//$light_green = #eaf3b2
 verde_boton = #C2CC85
 rojo_suave = #FFBCBC
 letra =#272822
@@ -44,6 +45,7 @@ letra =#272822
 		border-radius 1em
 		font-size 1.2em
 		box-shadow 0 0 10px rgba(black,.5)
+		margin-top .5em
 	// .valid-->clase agregada por "jQuery-validator" a los input	
 	&-formInput.valid
 	&-textarea.valid
@@ -57,76 +59,7 @@ letra =#272822
 //.error -->clase agregada por "jQuery-validator" para mostrar el mensaje de error		
 .error
 	display inline-block
-	padding-bottom .5em
-
-.dragdealer	
-	position relative
-	width 280px
-	height 46px
-	padding 2px
-	border-radius 15px
-	border 1px solid #525252	
-	//el fondo negro del slider
-	background: linear-gradient(to bottom,  #000000 0%,#222222 100%)
-	
-.iphone-slider
-	width 280px
-	height 54px
-	//height 46px
-	position relative
-	line-height 54px
-	
-.iphone-sliderText
-	position absolute
-	z-index 99
-	top 0
-	left 34%
-	font-family "Helvetica Neue", Helvetica, sans
-	font-size 24px
-	//color white
-	cursor default
-	user-select none	
-	background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 45%,rgba(255,255,255,1) 51%,rgba(255,255,255,0.3) 55%,rgba(255,255,255,0.3) 100%);
-	background-clip text
-	color transparent
-	animation-timing-function ease-in-out
-	animation text-spotlight 4s infinite
-	background-size 1000px
-
-@keyframes text-spotlight
-	0% {
-		//mask-position: -800px;
-		background-position -720px 0		
-	}
-	100% {
-		//mask-position: 0px;
-		background-position 720px 0		
-	}
-
-.dragdealer	.handle 
-	position absolute
-	//top 0
-	//left 0
-	cursor pointer	
-	z-index 999
-	top initial
-	left initial	
-
-.dragdealer .arrow	
-	font-size 16px
-	line-height 30px		
-	color #FFF
-	text-align center	
-	width 68px
-	height 44px
-	border-radius 10px
-	//la imagen de la flecha, con degradado para el color gris
-	background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAYCAYAAAB0kZQKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASJJREFUeNpi7OnpYaAC0AXiF0D8mhzNTAzUASBHnAdim4F0BAhIA/EBIC4aSEeAADMQ9wLxRiDmHyhHwIAfNHqMiXZEcXExGJMCiNCjCMTHgDiTkFmM////p4rXe3t78Rm0DIjTgfgLNkkWoGZQij7MQFsQBY2aICC+Rq80gQ2oA/EZIE4YSEeAACcQzwfimVD2gDgCBtKgiVZlIB0BAgbQbBwykI5A5I4BtPsaNLfcHKiQWADEJiAHDERIfAfiLKgjBiQ67kCD/zK2NAFqjMyi0AJQVnPCI78GiBNxFttQF6ZToVjG5ohfoLoOiKcMVO54BA3+swPVntgKxIbEOIAWjvgLxJVA7APE7waisHoKxBFAfGSgSszL0MLnBTmaAQIMAKg/OsrT7JG8AAAAAElFTkSuQmCC'),linear-gradient(to bottom, #fefefe 0%,#dddddd 49%,#d1d1d1 51%,#a1a1a1 100%)
-	background-repeat no-repeat
-	background-position 50%
-
-.dragdealer .disabled
-	background #898989
+	padding-bottom .7em
 
 /*RESPONSIVE*/
 
@@ -146,6 +79,8 @@ letra =#272822
 		width 100%
 		border-left 8px solid verde
 		border-bottom 1px solid $gris
+		background-color $light_green
+
 		&-container
 			display flex
 			flex-flow row nowrap
@@ -156,14 +91,11 @@ letra =#272822
 			padding-left 1.5em
 			text-align justify
 		&-form
-			display inline-block
+			// display inline-block
 			width 65%
 		&-formInput
 		&-textarea
 			background-color #DFF0D8
 			
 	.error
-		display block		
-			
-	.iphone-slider
-		margin 0 auto		
+		display block
