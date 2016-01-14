@@ -15,10 +15,10 @@ var mediaQuery = (function () {
 		//	bodyTouch.destroy();
 		//	dragend.destroy();
 		// }
-		// if( mobileNavigation.getInstance() || touchVertical.getInstance() ){
-		// 	mobileNavigation.remove();
-		// 	touchVertical.remove();
-		// }
+		if( mobileNavigation.getInstance() || touchVertical.getInstance() ){
+			mobileNavigation.remove();
+			touchVertical.remove();
+		}
 		if(window.matchMedia(media).matches) {
 			//console.log("Dispositivo movil!!!");
 

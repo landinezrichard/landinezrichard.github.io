@@ -30,7 +30,7 @@ var mobileNavigation = (function () {
 	//obtenemos el contenedor de las paginas para iniciar Dragend
 	var $container = document.querySelector(".MainContainer");	
 
-	let dragend;
+	let dragend;	
 
 	function getSections(secciones,size){
 		for(let i = 0; i < size; i++){
