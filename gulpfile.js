@@ -121,7 +121,7 @@ gulp.task('build-js', function() {
 gulp.task('image-min', function(){
   gulp.src(paths.images.watch)
   .pipe(imageop({
-    optimizationLevel: 5,
+    optimizationLevel: 7,
     progressive: true,
     interlaced: true
   }))
